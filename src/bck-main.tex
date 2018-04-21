@@ -1,0 +1,107 @@
+
+\documentclass[11pt, a4paper, twoside, pdf]{book}
+% Opcions 
+%  draft : mostra una marca d'aigua
+%  bn : no carrega hyperref i la majoria de colors són escala de grisos
+\usepackage[bn]{iesbbook}
+
+%%\let\ofrac\frac
+%%\let\frac\dfrac
+%%\usepackage{pxfonts}
+
+\newcommand{\vso}{\vspace{1cm}}
+\newcommand{\vsoo}{\vspace{1.5cm}}
+\newcommand{\vsooo}{\vspace{2cm}}
+\newcommand{\spen}{{\small \smallpencil}}
+\newcommand{\mental}{\includegraphics[width=0.5cm]{img2/comments}\hspace{0.25cm}}
+\newcommand{\ggb}{\includegraphics[width=0.5cm]{img2/geogebra.png}\hspace{0.25cm}}
+
+\makesolucionari
+ 
+
+\begin{document}
+	
+\pagestyle{empty}
+\include{portada}
+
+
+\pagestyle{fancy}
+
+ 
+  
+\mypart[Fractal de Mandelbrot. La bellesa dels nombres complexos.]{ARITMÈTICA, ÀLGEBRA I TRIGONOMETRIA}{img2/bloc1}
+
+\vspace*{\fill}
+\begin{center}
+	\includegraphics[width=0.65\textwidth]{img2/bloc1-historia}
+\end{center}
+\vspace*{\fill}
+
+\include{chap-reals}
+\include{chap-algebra}
+\include{chap-trigonometria}
+\include{chap-complexos}
+ 
+%%%%% Activitats de bloc 1
+\include{bloc1}
+
+\mypart[L'anàlisi de sèries temporals és cabdal en la vida quotidiana.]{ANÀLISI DE FUNCIONS}{img2/bloc2}
+ 
+\vspace*{\fill}
+\begin{center}
+	\includegraphics[width=0.65\textwidth]{img2/bloc2-historia}
+\end{center}
+\vspace*{\fill} 
+ 
+\include{chap-funcelemental}
+\include{chap-limits}
+\include{chap-derivades}
+
+%%%%% Activitats de bloc 2
+\include{bloc2}
+
+
+  
+\mypart[La naturalesa està escrita en llenguatge matemàtic. --Galileo Galilei--]{GEOMETRIA EN EL PLA}{img2/bloc3}
+
+\vspace*{\fill}
+\begin{center}
+	\includegraphics[width=0.65\textwidth]{img2/bloc3-historia}
+\end{center}
+\vspace*{\fill}
+
+\include{chap-vectors}
+\include{chap-analitica}
+\include{chap-coniques}
+
+%%%%% Activitats de bloc 3
+
+\include{bloc3}
+ 
+\mypart[(...) Aconseguírem obtenir així la fórmula estadística per conèixer la posició d'un electró. Però, personalment, no crec que Déu jugui als daus. --Albert Einstein--]{ESTADÍSTICA I PROBABILITAT}{img2/bloc4}
+
+\vspace*{\fill}
+\begin{center}
+	\includegraphics[width=0.65\textwidth]{img2/bloc4-historia}
+\end{center}
+\vspace*{\fill}
+
+\include{chap-estadistica}
+
+%\include{chap-probabilitat}
+
+
+\pagestyle{blocfancy}
+
+\newpage 
+\immediate\closeout\studentkeys
+
+\def\currentname{Solucionari}
+\fakechapter[\simbolclaubig]{ Solucions }
+\addcontentsline{toc}{part}{Solucions}
+\begin{multicols}{2}
+	\fontsize{10.5}{12.6}\selectfont
+	\input{studentkeys}
+\end{multicols}
+
+\end{document} 

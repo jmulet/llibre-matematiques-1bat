@@ -1,0 +1,190 @@
+\documentclass[a4paper, 11pt]{book}
+\usepackage{amsmath}
+\usepackage{tasks}
+\usepackage[catalan]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{eurosym}
+
+\newcommand{\limx}[2][x]{\mathop{lim}\limits_{#1\to #2} }
+
+\begin{document}
+	
+\section*{Solucions de les activitats de derivació de la pàg 71.}
+	
+		
+	\subsection*{Ex. 1}
+	
+	Hem de calcular la derivada de $f(x)=x^3$ en $x=2$ a partir de la definició (amb el límit):
+	
+	$f'(2) = \limx[h]{0} \dfrac{f(2+h)-f(2)}{h}=\limx[h]{0} \dfrac{(2+h)^3-2^3}{h}=\dfrac{0}{0}$ Indeterminat. Calculam la potència $(2+h)^3=(2+h)^2 \cdot (2+h)=8+12h+6h^2+h^3$ i simplificam el numerador.
+	
+		$f'(2) = \limx[h]{0} \dfrac{12h+6h^2+h^3}{h}=\limx[h]{0} 12+6h+h^2 = 12$.
+
+
+\subsection*{Ex. 2}
+
+Hem de calcular la derivada de $f(x)=\sqrt{x}$ en $x=1$ a partir de la definició (amb el límit):
+
+$f'(1) = \limx[h]{0} \dfrac{f(1+h)-f(1)}{h}=\limx[h]{0} \dfrac{\sqrt{1+h}-\sqrt{1}}{h}=\dfrac{0}{0}$ Indeterminat. Racionalitzam i simplificam
+
+$f'(1) = \limx[h]{0} \dfrac{(\sqrt{1+h}-1)}{h}\dfrac{(\sqrt{1+h}+1)}{(\sqrt{1+h}+1)}=\limx[h]{0} \dfrac{1+h-1}{h}\dfrac{1}{(\sqrt{1+h}+1)}=\limx[h]{0} \dfrac{h}{h}\dfrac{1}{(\sqrt{1+h}+1)}=\dfrac{1}{2}$.
+	
+	
+	\subsection*{Ex. 3}
+	
+	Hem de calcular la derivada de $f(x)=1/x^2$ en $x=4$ a partir de la definició (amb el límit):
+	
+	$f'(4) = \limx[h]{0} \dfrac{f(4+h)-f(4)}{h}=\limx[h]{0} \dfrac{\frac{1}{(4+h)^2} - \frac{1}{4^2}  }{h}=\dfrac{0}{0}$ Indeterminat. Operam el numerador amb el mcm i el simplificam .
+	
+	$f'(4) = \limx[h]{0} \dfrac{ \frac{16-(4+h)^2}{16\cdot (4+h)^2}}{h} =  \limx[h]{0} \dfrac{-8h+h^2}{16 h (4+h)^2}= \limx[h]{0} \dfrac{-8+h}{16 (4+h)^2}=-\dfrac{1}{32}$.
+	
+	
+	\subsection*{Ex. 4}
+	
+	Hem de calcular la derivada de $f(x)=3x^2-5x+2$ en $x=1$ a partir de la definició (amb el límit):
+	
+	$f'(1) = \limx[h]{0} \dfrac{f(1+h)-f(1)}{h}=\limx[h]{0} \dfrac{3(1+h)^2-5(1+h)+2 -0}{h}=\dfrac{0}{0}$ Indeterminat. Desenvolupam les potències i simplificam el numerador.
+	
+	$f'(1) = \limx[h]{0} \dfrac{h+3h^2}{h}=\limx[h]{0} 1+3h = 1$.
+	
+	
+	\subsection*{Ex. 5}
+	
+	Hem de calcular la derivada de $f(x)=x-3$ en $x=2$ a partir de la definició (amb el límit):
+	
+	$f'(2) = \limx[h]{0} \dfrac{f(2+h)-f(2)}{h}=\limx[h]{0} \dfrac{(2+h)-3-(-1)}{h}=\dfrac{0}{0}$ Indeterminat. Simplificam el numerador eliminant els parèntesis.
+	
+	$f'(2) = \limx[h]{0} \dfrac{h}{h}=1$.
+	
+\subsection*{Ex. 6}
+
+\begin{tasks}(2)
+	\task $y'=8x+2$
+	\task $y'=6x^2-6x+7$
+	\task $y'=2x-5$
+	\task $y'=56x^6-54x^5-15x^2$
+\end{tasks}	
+
+\subsection*{Ex. 7}
+
+\begin{tasks}(2)
+	\task $y'=10x+28x^3-3$
+	\task $y'=30x^4-8x+7+15x^2$
+	\task $y'=5x^4-28x^3+6x^2$
+	\task $y'=9x^2-54x^5-16x^7$
+\end{tasks}	
+
+
+\subsection*{Ex. 9}
+
+\begin{tasks}(2)
+	\task $y'=\frac{14}{3}x+\frac{3}{5}+ \frac{8}{3}\frac{1}{x^2}$
+	\task $y'=\frac{15}{2}x^2 - \frac{4}{3}x + \frac{3}{5\sqrt{x}}$
+	\task $y'=\frac{4}{7}x^2 - \frac{10}{49}x-\frac{2}{\sqrt{x^3}}$
+\end{tasks}	
+
+\subsection*{Ex. 10}
+
+\begin{tasks}(1)
+	\task Expressam la funció com $y=\dfrac{2x^2-5x+3}{x+2}$,  $y'=\dfrac{(4x-5)(x+2)-(2x^2-5x+3)\cdot 1}{(x+2)^2}=\cdots=\dfrac{2x^2+8x-13}{(x+2)^2}$.
+	\task Expressam la funció com $y=\dfrac{12x^3-6x^2+16x-8}{7x-1}$, 
+	
+	 $y'=\dfrac{(36x^2-12x+16)\cdot(7x-1)-7\cdot(12x^3-6x^3+16x-8)}{(7x-1)^2}=\cdots$
+	 
+	 $=\dfrac{168\,x^3-78\,x^2+12\,x+40}{(7x-1)^2}$
+	 
+	 
+	 \task Empram derivació logarítmica per simplificar els càlculs:
+	 
+	
+	 $\ln y = \ln(8x+5x^2) + \ln(2x^5-7) - \ln(4x+6)$ i derivam tota l'equació
+	 
+	 $\dfrac{1}{y} y' = \dfrac{1}{8x+5x^2} (8+10x) + \dfrac{1}{2x^5-7} 10 x - \dfrac{1}{4x+6} 4$ 
+	 
+	 ara aïllam la derivada passant la $y$ a multiplicar al membre de la dreta
+	 
+	 $ y' = \dfrac{(8x+5x^2)\cdot(2x^5-7)}{4x+6} \left[ \dfrac{1}{8x+5x^2} (8+10x) + \dfrac{1}{2x^5-7} 10 x - \dfrac{1}{4x+6} 4 \right]$ 
+	 
+	 
+	 \task Empram derivació logarítmica per simplificar els càlculs:
+	 
+	 
+	 $\ln y = \ln(x+9) + \ln(2x-3) - \ln(x+3) - \ln(x+2)$ i derivam tota l'equació
+	 
+	 $\dfrac{1}{y} y' = \dfrac{1}{x+9}+ \dfrac{1}{2x-3} - \dfrac{1}{x+3} - \dfrac{1}{x+2}$ 
+	 
+	 ara aïllam la derivada passant la $y$ a multiplicar al membre de la dreta
+	 
+	 $ y' = \dfrac{(x+9)\cdot(2x-3)}{(x+3)\cdot (x+2)} \left[  \dfrac{1}{x+9}+ \dfrac{1}{2x-3} - \dfrac{1}{x+3} - \dfrac{1}{x+2} \right]$ 
+ 
+\end{tasks}	
+
+
+\subsection*{Ex. 11}
+
+\begin{tasks}(1)
+	\task  $y'=\dfrac{1}{2\sqrt{x^3+5}\cdot 3x^2}$
+	\task  $y'=\dfrac{1}{3\sqrt[3]{(2x^3+4x^2-1)^2}}\cdot (6x^2+8x)$
+	\task  $y'= 5(5x^3+2)^4 \cdot 15x^2 =75x^2 \cdot (5x^3+2)^4$
+	\task  $y'=9 (2x^2+5x)^8 \cdot (4x+5)$
+\end{tasks}	
+
+\subsection*{Ex. 14}
+
+\begin{tasks}(1)
+	\task  $y'=e^{x^5+4x^3}\cdot (5x^4+12 x^2 )$
+	\task  $y'=7 \left( e^{2x^3-7x^2} \right)^6 \cdot e^{2x^3-7x^2} \cdot (6x^2-14x)=7 \left( e^{2x^3-7x^2} \right)^7   \cdot (6x^2-14x)$
+	\task  $y'=e^{(3x^5+5x^3)^5}\cdot 5(3x^5+5x^3)^4\cdot (15 x^4+ 15x^2)$
+	\task  Començam escrivint l'arrel cúbica com elevar a 1/3. La funció que volem derivar queda $y=e^{\frac{1}{3}(6x^5-9x^8)^2}$, ara derivam
+	
+	 $y'=e^{\frac{1}{3}(6x^5-9x^8)^2}\cdot \frac{2}{3}(6x^5-9x^8)\cdot(30x^4 - 72 x^7)$
+\end{tasks}	
+	
+	
+\subsection*{Ex. 15}
+	Cal que utilitzeu les propietats dels logaritmes per simplificar la funció abans de derivar
+	\begin{tasks}(1)
+		\task   Passam la funció $y=\ln\left( (7x^5-2x^3)^{12} \cdot (2x+3) \right)$ en forma
+	
+		$y=12 \ln (7x^5-2x^3) + \ln(2x+3)$ que és molt més fàcil de derivar:
+		
+		$y'=12 \dfrac{1}{7x^5-2x^3}(35x^4-6x^2)+\dfrac{1}{2x+3}\cdot 2$
+		
+		
+	   \task  Passam  la funció $y=\ln\sqrt{\left( 3x^3+2x^3\right)^3}$ en forma
+	   
+	   $y=\frac{3}{2}\ln(3x^3+2x^2)$ que és molt més fàcil de derivar:
+	   
+	   	$y'=\frac{3}{2}\dfrac{1}{3x^3+2x^2}\cdot (9x^2+4x)$
+	   
+	 
+	  \task  Passam la funció $y=\ln\sqrt{\frac{4x^5-7x}{6x-1}}$ en forma
+	 
+	 $y=\frac{1}{2}\left( \ln(4x^5-7x) - \ln(6x-1)\right)$ que és molt més fàcil de derivar:
+	 
+	 $y'=\frac{1}{2}\left( \dfrac{1}{(4x^5-7x)}\cdot(20 x^4 - 7) - \dfrac{1}{(6x-1)}\cdot 6\right)$
+	 
+	 	  \task  Passam   la funció $y=\ln \left( x^4-2x^5 \right)^{2/3}$ en forma
+	 
+	 $y=\frac{2}{3} \ln (x^4-2x^5)$ que és molt més fàcil de derivar:
+	 
+	 $y'=\frac{2}{3}  \dfrac{1}{(x^4-2x^5)}\cdot(4 x^3 - 10x^4) $
+	\end{tasks}	
+
+\subsection*{Ex. 16 }
+\begin{tasks}
+	\task $f'(x)=\dfrac{-\sin x \cdot (3+\sin x^2) - \cos x \cdot \cos x^2 \cdot 2x}{(3+\sin x^2)^2}$
+	\end{tasks}
+
+\subsection*{Ex. 17 }
+\begin{tasks}
+	\task $f'(x)=\dfrac{9}{\sqrt{\sin^3 (5x+2)}} \cdot 3 \sin^2 (5x+2) \cdot 5$
+	\task Primer transformam la funció a $f(x)=\frac{1}{2} \left( \ln (3+2\cos x) - \ln(3-2\cos x)\right)$, aleshores 
+	$f'(x)=\frac{1}{2} \left( \dfrac{1}{3+2\cos x} \cdot(-2\sin x) - \dfrac{1}{3-2\cos x}\cdot (2\sin x)\right)=\cdots =\dfrac{4\sin x \cos x}{9 - 4 \cos^2 x}$
+	\task No cal fer-la
+	\task $f'(x)=\dfrac{1}{\cos^2(x-1)}\cdot 2\sin(x-1)\cdot (-\sin(x-1)) \cdot 1 = -2\, \mathrm{tg^2}\, (x-1)$
+	
+\end{tasks}
+
+
+\end{document}

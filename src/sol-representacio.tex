@@ -1,0 +1,605 @@
+\documentclass[11pt, a4paper, twoside, pdf]{book}
+\include{estil-llibre}
+\begin{document}
+	\pagestyle{empty}
+
+
+%%%%%%% POLINOMI
+\begin{center}
+	\setlength\LTleft{0pt}
+	\setlength\LTright{0pt}
+	\fontsize{10.5}{11}
+	\def\arraystretch{1.01}
+	\begin{longtable}[h]{|p{0.3\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+		\hline
+		\multicolumn{3}{|c|} { 
+			\cellcolor{lightgray} \textbf{Problema 56 a) $f(x)=x(x+2)(x-2)$} }
+		\\  [1.5ex] \hline 
+		1. \textbf{Domini} & $(-\infty, +\infty)$ & Tipus: Polinòmica  \\  [1.5ex] \hline 
+		2. \textbf{Simetries} & \multicolumn{2}{l|}{$f(-x)=-f(x)$ és simètrica senar} \\  [1.5ex] \hline 
+		3. \textbf{Talls amb els eixos}
+		
+		Talls amb l'eix OX:
+		
+		Tall amb l'eix OY: & \multicolumn{2}{p{10cm}|}{
+			
+			$(x=0, y=0)$  i $(x=\pm 2, y=0)$ 
+			\par
+			
+			$(x=0, y=0)$} \\  [1.5ex] \hline
+		
+		4. \textbf{Asímptotes} & & \\  [1.5ex] \hline 
+		Verticals: & No en té & \\  [1.5ex] \hline 
+		Horitzontals: &No en té & \\  [1.5ex] \hline 
+		Obliqües: &No en té & \\  [1.5ex] \hline   	
+		Branques: & $\limx{-\infty} f(x)=-\infty$ & $\limx{+\infty} f(x)=+\infty$ \\  [1.5ex] \hline    
+		5. \textbf{Derivada primera} & \multicolumn{2}{l|} {$f'(x)=3x^2-4$} \\  [1.5ex] \hline 
+		\textbf{Solucions de} $f'(x)=0$ & \multicolumn{2}{l|} {$x=-1.154$, $x=1.154$} \\  [1.5ex] \hline 
+		6.  \textbf{Creixement}: & Creixent $(-\infty,-1.154)\cup(1.154,+\infty)$ & Decreixent $(-1.154,1.154)$  \\  [1.5ex] \hline  
+		7. \textbf{Extrems} & Màxim $(x=-1.154, y=3.08)$ & Mínim $(x=1.154, y=-3.08)$ \\  [1.5ex] \hline 
+		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=6x$} \\  [1.5ex] \hline 
+		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {$x=0$} \\  [1.5ex] \hline 
+		9.  \textbf{Curvatura}: & Còncava $(0, + \infty)$ & Convexa $(-\infty,0)$  \\  [1.5ex] \hline   
+		10. \textbf{Punts d'inflexió} & \multicolumn{2}{l|} {$(x=0, y=0)$} \\  [1.5ex] \hline 
+		\multicolumn{3}{|p{\textwidth}|} {\textbf{Gràfica}: 
+			
+			\begin{center}
+				\includegraphics*[width=0.9\textwidth]{solrep/56a}
+			\end{center}
+		}
+		\\  [1.5ex] \hline 
+	\end{longtable}
+\end{center}
+\newpage
+
+\begin{center}
+	\setlength\LTleft{0pt}
+	\setlength\LTright{0pt}
+	\fontsize{10.5}{11}
+	\def\arraystretch{1.01}
+	\begin{longtable}[h]{|p{0.3\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+		\hline
+		\multicolumn{3}{|c|} { 
+			\cellcolor{lightgray} \textbf{Problema 56 b) $f(x)=x^4-2x^2$} }
+		\\  [1.5ex] \hline 
+		1. \textbf{Domini} & $(-\infty, +\infty)$ & Tipus: Polinòmica  \\  [1.5ex] \hline 
+		2. \textbf{Simetries} & \multicolumn{2}{l|}{$f(-x)=f(x)$ és simètrica parell} \\  [1.5ex] \hline 
+		3. \textbf{Talls amb els eixos}
+		
+		Talls amb l'eix OX:
+		
+		Tall amb l'eix OY: & \multicolumn{2}{p{10cm}|}{
+			
+			$(x=0, y=0)$  i $(x=\pm \sqrt{2}, y=0)$ 
+			\par
+			
+			$(x=0, y=0)$} \\  [1.5ex] \hline
+		
+		4. \textbf{Asímptotes} & & \\  [1.5ex] \hline 
+		Verticals: & No en té & \\  [1.5ex] \hline 
+		Horitzontals: &No en té & \\  [1.5ex] \hline 
+		Obliqües: &No en té & \\  [1.5ex] \hline   	
+		Branques: & $\limx{-\infty} f(x)=+\infty$ & $\limx{+\infty} f(x)=+\infty$ \\  [1.5ex] \hline    
+		5. \textbf{Derivada primera} & \multicolumn{2}{l|} {$f'(x)=4x^3-4x$} \\  [1.5ex] \hline 
+		\textbf{Solucions de} $f'(x)=0$ & \multicolumn{2}{l|} {$x=-1$, $x=1$} \\  [1.5ex] \hline 
+		6.  \textbf{Creixement}: & Creixent $(-1,0)\cup(1,+\infty)$ & Decreixent $(-\infty,-1)\cup (0,1)$  \\  [1.5ex] \hline  
+		7. \textbf{Extrems} & Màxim $(x=0, y=0)$ & Mínims $(x=-1, y=-1)$ i $(x=1, y=-1)$ \\  [1.5ex] \hline 
+		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=12x^2-4$} \\  [1.5ex] \hline 
+		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {$x=\pm 0.5774$} \\  [1.5ex] \hline 
+		9.  \textbf{Curvatura}: & Còncava $(-\infty, -0.5774) \cup (0.5774,+\infty)$ & Convexa $(-0.5774,0.5774)$  \\  [1.5ex] \hline   
+		10. \textbf{Punts d'inflexió} & \multicolumn{2}{l|} {$(x=\pm 0.5774, y=-0.5556)$} \\  [1.5ex] \hline 
+		\multicolumn{3}{|p{\textwidth}|} {\textbf{Gràfica}: 
+			
+			\begin{center}
+				\includegraphics*[width=0.9\textwidth]{solrep/56b}
+			\end{center}
+		}
+		\\  [1.5ex] \hline 
+	\end{longtable}
+\end{center}
+\newpage
+
+
+
+ \begin{center}
+ 	\setlength\LTleft{0pt}
+ 	\setlength\LTright{0pt}
+ 	\fontsize{10.5}{11}
+ 	\def\arraystretch{1.01}
+ 	\begin{longtable}[h]{|p{0.3\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+ 		\hline
+ 		\multicolumn{3}{|c|} { 
+ 			\cellcolor{lightgray} \textbf{Problema 56 c) $f(x)=2x^3+5x^2-4x$} }
+ 		\\  [1.5ex] \hline 
+ 		1. \textbf{Domini} & $(-\infty, +\infty)$ & Tipus: Polinòmica  \\  [1.5ex] \hline 
+ 		2. \textbf{Simetries} & \multicolumn{2}{l|}{No és simètrica} \\  [1.5ex] \hline 
+ 		3. \textbf{Talls amb els eixos}
+ 		
+ 		Talls amb l'eix OX:
+ 		
+ 		Tall amb l'eix OY: & \multicolumn{2}{p{10cm}|}{
+ 			
+ 			$(x=0, y=0)$, $(x=-3.14, y=0)$, $(x=0.64, y=0)$ 
+ 			\par
+ 			
+ 			$(x=0, y=0)$} \\  [1.5ex] \hline
+ 		
+ 		4. \textbf{Asímptotes} & & \\  [1.5ex] \hline 
+ 		Verticals: & No en té & \\  [1.5ex] \hline 
+ 		Horitzontals: &No en té & \\  [1.5ex] \hline 
+ 		Obliqües: &No en té & \\  [1.5ex] \hline   	
+ 		Branques: & $\limx{-\infty} f(x)=-\infty$ & $\limx{+\infty} f(x)=+\infty$ \\  [1.5ex] \hline    
+ 		5. \textbf{Derivada primera} & \multicolumn{2}{l|} {$f'(x)=6x^2+10x-4$} \\  [1.5ex] \hline 
+ 		\textbf{Solucions de} $f'(x)=0$ & \multicolumn{2}{l|} {$x=-2$, $x=1/3$} \\  [1.5ex] \hline 
+ 		6.  \textbf{Creixement}: & Creixent $(-\infty,-2)\cup(1/3,+\infty)$ & Decreixent $(-2,1/3)$  \\  [1.5ex] \hline  
+ 		7. \textbf{Extrems} & Màxim $(x=-2, y=12)$ & Mínim $(x=1/3, y=-0.704)$ \\  [1.5ex] \hline 
+ 		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=12x+10$} \\  [1.5ex] \hline 
+ 		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {$x=-0.83$} \\  [1.5ex] \hline 
+ 		9.  \textbf{Curvatura}: & Còncava $(0.83, +\infty) $ & Convexa $(-\infty, 0.83)$  \\  [1.5ex] \hline   
+ 		10. \textbf{Punts d'inflexió} & \multicolumn{2}{l|} {$(x=-0.83, y=-1.02)$} \\  [1.5ex] \hline 
+ 		\multicolumn{3}{|p{\textwidth}|} {\textbf{Gràfica}: 
+ 			
+ 			\begin{center}
+ 				\includegraphics*[width=0.9\textwidth]{solrep/56c}
+ 			\end{center}
+ 		}
+ 		\\  [1.5ex] \hline 
+ 	\end{longtable}
+ \end{center}
+ \newpage
+
+
+
+
+
+
+\begin{center}
+	\setlength\LTleft{0pt}
+	\setlength\LTright{0pt}
+	\fontsize{10.5}{11}
+	\def\arraystretch{1.01}
+	\begin{longtable}[h]{|p{0.3\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+		\hline
+		\multicolumn{3}{|c|} { 
+			\cellcolor{lightgray} \textbf{Problema 56 d) $f(x)=-\dfrac{x^3}{6}+x$} }
+		\\  [1.5ex] \hline 
+		1. \textbf{Domini} & $(-\infty, +\infty)$ & Tipus: Polinòmica  \\  [1.5ex] \hline 
+		2. \textbf{Simetries} & \multicolumn{2}{l|}{$f(-x)=-f(x)$ simètrica senar} \\  [1.5ex] \hline 
+		3. \textbf{Talls amb els eixos}
+		
+		Talls amb l'eix OX:
+		
+		Tall amb l'eix OY: & \multicolumn{2}{p{10cm}|}{
+			
+			$(x=0, y=0)$, $(x=\pm \sqrt{6}, y=0)$ 
+			\par
+			
+			$(x=0, y=0)$} \\  [1.5ex] \hline
+		
+		4. \textbf{Asímptotes} & & \\  [1.5ex] \hline 
+		Verticals: & No en té & \\  [1.5ex] \hline 
+		Horitzontals: &No en té & \\  [1.5ex] \hline 
+		Obliqües: &No en té & \\  [1.5ex] \hline   	
+		Branques: & $\limx{-\infty} f(x)=+\infty$ & $\limx{+\infty} f(x)=-\infty$ \\  [1.5ex] \hline    
+		5. \textbf{Derivada primera} & \multicolumn{2}{l|} {$f'(x)=-\frac{x^2}{2}+1$} \\  [1.5ex] \hline 
+		\textbf{Solucions de} $f'(x)=0$ & \multicolumn{2}{l|} {$x=\pm \sqrt{2}$} \\  [1.5ex] \hline 
+		6.  \textbf{Creixement}: & Creixent $(-\sqrt{2},\sqrt{2})$ & Decreixent $(-\infty, -\sqrt{2})\cup(\sqrt{2},+\infty)$  \\  [1.5ex] \hline  
+		7. \textbf{Extrems} & Màxim $(x=\sqrt{2}, y=0.942)$ & Mínim $(x=-\sqrt{2}, y=-0.942)$ \\  [1.5ex] \hline 
+		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=-x$} \\  [1.5ex] \hline 
+		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {$x=0$} \\  [1.5ex] \hline 
+		9.  \textbf{Curvatura}: & Còncava $(-\infty, 0) $ & Convexa $(0, +\infty)$  \\  [1.5ex] \hline   
+		10. \textbf{Punts d'inflexió} & \multicolumn{2}{l|} {$(x=0, y=0)$} \\  [1.5ex] \hline 
+		\multicolumn{3}{|p{\textwidth}|} {\textbf{Gràfica}: 
+			
+			\begin{center}
+				\includegraphics*[width=0.9\textwidth]{solrep/56d}
+			\end{center}
+		}
+		\\  [1.5ex] \hline 
+	\end{longtable}
+\end{center}
+\newpage
+
+
+
+
+\begin{center}
+	\setlength\LTleft{0pt}
+	\setlength\LTright{0pt}
+	\fontsize{10.5}{11}
+	\def\arraystretch{1.01}
+	\begin{longtable}[h]{|p{0.3\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+		\hline
+		\multicolumn{3}{|c|} { 
+			\cellcolor{lightgray} \textbf{Problema 56 e) $f(x)=x^3-2x^2+x-1$} }
+		\\  [1.5ex] \hline 
+		1. \textbf{Domini} & $(-\infty, +\infty)$ & Tipus: Polinòmica  \\  [1.5ex] \hline 
+		2. \textbf{Simetries} & \multicolumn{2}{l|}{No és simètrica} \\  [1.5ex] \hline 
+		3. \textbf{Talls amb els eixos}
+		
+		Talls amb l'eix OX:
+		
+		Tall amb l'eix OY: & \multicolumn{2}{p{10cm}|}{
+			
+			Té una arrel entre 1 i 2, no es pot trobar exactament.
+			\par
+			
+			$(x=0, y=-1)$} \\  [1.5ex] \hline
+		
+		4. \textbf{Asímptotes} & & \\  [1.5ex] \hline 
+		Verticals: & No en té & \\  [1.5ex] \hline 
+		Horitzontals: &No en té & \\  [1.5ex] \hline 
+		Obliqües: &No en té & \\  [1.5ex] \hline   	
+		Branques: & $\limx{-\infty} f(x)=-\infty$ & $\limx{+\infty} f(x)=+\infty$ \\  [1.5ex] \hline    
+		5. \textbf{Derivada primera} & \multicolumn{2}{l|} {$f'(x)=3x^2-4x+1$} \\  [1.5ex] \hline 
+		\textbf{Solucions de} $f'(x)=0$ & \multicolumn{2}{l|} {$x=1$, $x=1/3$} \\  [1.5ex] \hline 
+		6.  \textbf{Creixement}: & Creixent $(-\infty,1/3) \cup (1,+\infty)$ & Decreixent $(1/3, 1)$  \\  [1.5ex] \hline  
+		7. \textbf{Extrems} & Màxim $(x=1/3, y=-0.85)$ & Mínim $(x=1, y=-1)$ \\  [1.5ex] \hline 
+		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=6x-4$} \\  [1.5ex] \hline 
+		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {$x=2/3$} \\  [1.5ex] \hline 
+		9.  \textbf{Curvatura}: & Còncava $(2/3,+\infty) $ & Convexa $(-\infty, 2/3)$  \\  [1.5ex] \hline   
+		10. \textbf{Punts d'inflexió} & \multicolumn{2}{l|} {$(x=2/3, y=-0.956)$} \\  [1.5ex] \hline 
+		\multicolumn{3}{|p{\textwidth}|} {\textbf{Gràfica}: 
+			
+			\begin{center}
+				\includegraphics*[width=0.9\textwidth]{solrep/56e}
+			\end{center}
+		}
+		\\  [1.5ex] \hline 
+	\end{longtable}
+\end{center}
+\newpage
+
+
+
+
+\begin{center}
+	\setlength\LTleft{0pt}
+	\setlength\LTright{0pt}
+	\fontsize{10.5}{11}
+	\def\arraystretch{1.01}
+	\begin{longtable}[h]{|p{0.3\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+		\hline
+		\multicolumn{3}{|c|} { 
+			\cellcolor{lightgray} \textbf{Problema 56 f) $f(x)=(x+1)^2\,(x-2)$} }
+		\\  [1.5ex] \hline 
+		1. \textbf{Domini} & $(-\infty, +\infty)$ & Tipus: Polinòmica  \\  [1.5ex] \hline 
+		2. \textbf{Simetries} & \multicolumn{2}{l|}{No és simètrica} \\  [1.5ex] \hline 
+		3. \textbf{Talls amb els eixos}
+		
+		Talls amb l'eix OX:
+		
+		Tall amb l'eix OY: & \multicolumn{2}{p{10cm}|}{
+			
+			$(x=-1, y=0)$, $(x=2, y=0)$ 
+			\par
+			
+			$(x=0, y=-2)$} \\  [1.5ex] \hline
+		
+		4. \textbf{Asímptotes} & & \\  [1.5ex] \hline 
+		Verticals: & No en té & \\  [1.5ex] \hline 
+		Horitzontals: &No en té & \\  [1.5ex] \hline 
+		Obliqües: &No en té & \\  [1.5ex] \hline   	
+		Branques: & $\limx{-\infty} f(x)=-\infty$ & $\limx{+\infty} f(x)=+\infty$ \\  [1.5ex] \hline    
+		5. \textbf{Derivada primera} & \multicolumn{2}{l|} {$f'(x)=(x+1)(3x-3)$} \\  [1.5ex] \hline 
+		\textbf{Solucions de} $f'(x)=0$ & \multicolumn{2}{l|} {$x=-1$, $x=1$} \\  [1.5ex] \hline 
+		6.  \textbf{Creixement}: & Creixent $(-\infty,-1)\cup(1,+\infty)$ & Decreixent $(-1,1)$  \\  [1.5ex] \hline  
+		7. \textbf{Extrems} & Màxim $(x=-1, y=0)$ & Mínim $(x=1, y=-4)$ \\  [1.5ex] \hline 
+		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=6x$} \\  [1.5ex] \hline 
+		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {$x=0$} \\  [1.5ex] \hline 
+		9.  \textbf{Curvatura}: & Còncava $(0,+\infty) $ & Convexa $(-\infty,0)$  \\  [1.5ex] \hline   
+		10. \textbf{Punts d'inflexió} & \multicolumn{2}{l|} {$(x=0, y=-2)$} \\  [1.5ex] \hline 
+		\multicolumn{3}{|p{\textwidth}|} {\textbf{Gràfica}: 
+			
+			\begin{center}
+				\includegraphics*[width=0.9\textwidth]{solrep/56f}
+			\end{center}
+		}
+		\\  [1.5ex] \hline 
+	\end{longtable}
+\end{center}
+\newpage
+
+
+
+
+
+\begin{center}
+	\setlength\LTleft{0pt}
+	\setlength\LTright{0pt}
+	\fontsize{10.5}{11}
+	\def\arraystretch{1.01}
+	\begin{longtable}[h]{|p{0.3\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+		\hline
+		\multicolumn{3}{|c|} { 
+			\cellcolor{lightgray} \textbf{Problema 57a) $f(x)=\dfrac{x^2-3x+2}{x^2+3x+2}=\dfrac{(x+1)(x+2)}{(x-1)(x-2)}$} }
+		\\  [1.5ex] \hline 
+		1. \textbf{Domini} & $\mathbb{R}-\{-2,-1\}$ & Tipus: Racional  \\  [1.5ex] \hline 
+		2. \textbf{Simetries} & \multicolumn{2}{l|}{No té cap simetria. Propietat curiosa $f(-x)=\frac{1}{f(x)}$} \\  [1.5ex] \hline 
+		3. \textbf{Talls amb els eixos}
+		
+		Talls amb l'eix OX:
+		
+		Tall amb l'eix OY: & \multicolumn{2}{p{10cm}|}{
+			
+			$(x=1, y=0)$  i $(x=2, y=0)$ 
+			\par
+			
+			$(x=0, y=1)$} \\  [1.5ex] \hline
+		
+		4. \textbf{Asímptotes} & & \\  [1.5ex] \hline 
+		Verticals: & $x=-2$ \par $\limx{-2^-} f(x)=+\infty$, 	\par  $\limx{-2^+} f(x)=-\infty$  &   $x=-1$ \par 
+		$\limx{-1^-} f(x)=-\infty$,  \par $\limx{-1^+} f(x)=+\infty$ \\
+		[1.5ex] \hline 
+		Horitzontals: & $y=1$ & $x\rightarrow -\infty$ per damunt \par $x\rightarrow +\infty$ per davall  \\  [1.5ex] \hline 
+		Obliqües: &No en té & \\  [1.5ex] \hline   	
+		5. \textbf{Derivada primera} & \multicolumn{2}{l|} {$f'(x)=\dfrac{6x^2-12}{(x^2+3x+2)^2}$} \\  [1.5ex] \hline 
+		\textbf{Solucions de} $f'(x)=0$ & \multicolumn{2}{l|} {$x=\pm \sqrt{2}$} \\  [1.5ex] \hline 
+		6.  \textbf{Creixement}: & Creixent $(-\infty,-\sqrt{2}) \cup (\sqrt{2},+\infty)$ & Decreixent $(-\sqrt{2},\sqrt{2})$  \\  [1.5ex] \hline  
+		7. \textbf{Extrems} & Màxim: $(x=-\sqrt{2}, y=-33.9)$ & Mínim $(x=\sqrt{2}, y=-0.029)$ \\  [1.5ex] \hline 
+		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=\dfrac{12x^3-72x-72}{(x^2+3x+2)^3}$} \\  [1.5ex] \hline 
+		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {$x\approx 2.847$ no es pot trobar exactament} \\  [1.5ex] \hline 
+		
+		\multicolumn{3}{|p{\textwidth}|} {\textbf{Gràfica}: 
+			
+			\begin{center}
+				\includegraphics*[width=0.8\textwidth]{solrep/57a}
+			\end{center}
+		}
+		\\  [1.5ex] \hline 
+	\end{longtable}
+\end{center}
+\newpage
+
+
+
+
+
+
+%%%%%%% RACIONAL
+\begin{center}
+	\setlength\LTleft{0pt}
+	\setlength\LTright{0pt}
+	\fontsize{10.5}{11}
+	\def\arraystretch{1.01}
+	\begin{longtable}[h]{|p{0.3\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+		\hline
+		\multicolumn{3}{|c|} { 
+			\cellcolor{lightgray} \textbf{Problema 57b) $f(x)=\dfrac{4}{x^2-4}=\dfrac{4}{(x+2)(x-2)}$} }
+		\\  [1.5ex] \hline 
+		1. \textbf{Domini} & $\mathbb{R}-\{-2,2\}$ & Tipus: Racional  \\  [1.5ex] \hline 
+		2. \textbf{Simetries} & \multicolumn{2}{l|}{$f(-x)=f(x)$ Té simetria parell} \\  [1.5ex] \hline 
+		3. \textbf{Talls amb els eixos}
+		
+		Talls amb l'eix OX:
+		
+		Tall amb l'eix OY: & \multicolumn{2}{p{10cm}|}{
+			
+			No talla 
+			\par
+			
+			$(x=0, y=-1)$} \\  [1.5ex] \hline
+		
+		4. \textbf{Asímptotes} & & \\  [1.5ex] \hline 
+		Verticals: & $x=-2$ \par $\limx{-2^-} f(x)=+\infty$, 	\par  $\limx{-2^+} f(x)=-\infty$  &   $x=2$ \par 
+		$\limx{2^-} f(x)=-\infty$,  \par $\limx{2^+} f(x)=+\infty$ \\
+		[1.5ex] \hline 
+		Horitzontals: & $y=1$ & $x\rightarrow -\infty$ per damunt \par $x\rightarrow +\infty$ per damunt  \\  [1.5ex] \hline 
+		Obliqües: &No en té & \\  [1.5ex] \hline   	
+		5. \textbf{Derivada primera} & \multicolumn{2}{l|} {$f'(x)=\dfrac{8x}{(x^2-4)^2}$} \\  [1.5ex] \hline 
+		\textbf{Solucions de} $f'(x)=0$ & \multicolumn{2}{l|} {$x=0$} \\  [1.5ex] \hline 
+		6.  \textbf{Creixement}: & Creixent $(-\infty, -2) \cup (-2,0)$ & Decreixent $(0,2)\cup(2,+\infty)$  \\  [1.5ex] \hline  
+		7. \textbf{Extrems} & Màxim: $(x=0, y=-1)$ & Mínim: No en té \\  [1.5ex] \hline 
+		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=\dfrac{24x^2+32}{(x^2-4)^3}$} \\  [1.5ex] \hline 
+		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {No en té} \\  [1.5ex] \hline 
+		
+		\multicolumn{3}{|p{\textwidth}|} {\textbf{Gràfica}: 
+			
+			\begin{center}
+				\includegraphics*[width=0.8\textwidth]{solrep/57b}
+			\end{center}
+		}
+		\\  [1.5ex] \hline 
+	\end{longtable}
+\end{center}
+\newpage
+
+
+
+
+
+%%%%%%% RACIONAL
+\begin{center}
+	\setlength\LTleft{0pt}
+	\setlength\LTright{0pt}
+	\fontsize{10.5}{11}
+	\def\arraystretch{1.01}
+	\begin{longtable}[h]{|p{0.3\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+		\hline
+		\multicolumn{3}{|c|} { 
+			\cellcolor{lightgray} \textbf{Problema 57c) $f(x)=\dfrac{x^3}{(x-1)^2}$} }
+		\\  [1.5ex] \hline 
+		1. \textbf{Domini} & $\mathbb{R}-\{1\}$ & Tipus: Racional  \\  [1.5ex] \hline 
+		2. \textbf{Simetries} & \multicolumn{2}{l|}{No té simetria } \\  [1.5ex] \hline 
+		3. \textbf{Talls amb els eixos}
+		
+		Talls amb l'eix OX: 
+		
+		Tall amb l'eix OY: & \multicolumn{2}{p{10cm}|}{
+			
+			$x=0$
+			\par
+			
+			$(x=0, y=0)$} \\  [1.5ex] \hline
+		
+		4. \textbf{Asímptotes} & & \\  [1.5ex] \hline 
+		Verticals: & $x=1$  &  
+		$\limx{1^-} f(x)=+\infty$,  \par $\limx{1^+} f(x)=+\infty$ \\
+		[1.5ex] \hline 
+		Horitzontals: & No en té &    \\  [1.5ex] \hline 
+		Obliqües: & $y=x+2$ & $x\rightarrow -\infty$ per davall, \par  $x\rightarrow +\infty$ per damunt \\ [1.5ex] \hline   	
+		5. \textbf{Derivada primera} & \multicolumn{2}{l|} {$f'(x)=\dfrac{x^3-3x^2}{(x-1)^3}$} \\  [1.5ex] \hline 
+		\textbf{Solucions de} $f'(x)=0$ & \multicolumn{2}{l|} {$x=0$, $x=3$} \\  [1.5ex] \hline 
+		6.  \textbf{Creixement}: & Creixent $(-\infty,1)\cup(3,+\infty)$ & Decreixent $(1,3)$  \\  [1.5ex] \hline  
+		7. \textbf{Extrems} & Màxim: no en té & Mínim: $(x=3, y=27/4)$  \\  [1.5ex] \hline 
+		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=\dfrac{6x}{(x-1)^4}$} \\  [1.5ex] \hline 
+		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {$x=0$, el (0,0) és un punt d'inflexió.} \\  [1.5ex] \hline 
+		
+		\multicolumn{3}{|p{\textwidth}|} {\textbf{Gràfica}: 
+			
+			\begin{center}
+				\includegraphics*[width=0.8\textwidth]{solrep/57c}
+			\end{center}
+		}
+		\\  [1.5ex] \hline 
+	\end{longtable}
+\end{center}
+\newpage
+
+%%%%%%% RACIONAL
+\begin{center}
+	\setlength\LTleft{0pt}
+	\setlength\LTright{0pt}
+	\fontsize{10.5}{11}
+	\def\arraystretch{1.01}
+	\begin{longtable}[h]{|p{0.3\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+		\hline
+		\multicolumn{3}{|c|} { 
+			\cellcolor{lightgray} \textbf{Problema 57d) $f(x)=\dfrac{x^2}{2-x}$} }
+		\\  [1.5ex] \hline 
+		1. \textbf{Domini} & $\mathbb{R}-\{2\}$ & Tipus: Racional  \\  [1.5ex] \hline 
+		2. \textbf{Simetries} & \multicolumn{2}{l|}{No té simetria} \\  [1.5ex] \hline 
+		3. \textbf{Talls amb els eixos}
+		
+		Talls amb l'eix OX: 
+		
+		Tall amb l'eix OY: & \multicolumn{2}{p{10cm}|}{
+			
+			$x=0$
+			\par
+			
+			$(x=0, y=0)$} \\  [1.5ex] \hline
+		
+		4. \textbf{Asímptotes} & & \\  [1.5ex] \hline 
+		Verticals: & $x=2$  &  
+		$\limx{2^-} f(x)=+\infty$,  \par $\limx{2^+} f(x)=-\infty$ \\
+		[1.5ex] \hline 
+		Horitzontals: & No en té &    \\  [1.5ex] \hline 
+		Obliqües: & $y=-x-2$ & $x\rightarrow -\infty$ per damunt, \par  $x\rightarrow +\infty$ per davall \\ [1.5ex] \hline   	
+		5. \textbf{Derivada primera} & \multicolumn{2}{l|} {$f'(x)=\dfrac{x^2-4x }{(2-x)^2 }$} \\  [1.5ex] \hline 
+		\textbf{Solucions de} $f'(x)=0$ & \multicolumn{2}{l|} {$x=0$, $x=4$} \\  [1.5ex] \hline 
+		6.  \textbf{Creixement}: & Creixent $(0,2)\cup(2,4)$ & Decreixent $(-\infty,0)\cup(4,+\infty)$  \\  [1.5ex] \hline  
+		7. \textbf{Extrems} & Màxim: $(x=4, y=-8)$ & Mínim: $(x=0, y=0)$  \\  [1.5ex] \hline 
+		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=\dfrac{8}{(2-x)^3}$} \\  [1.5ex] \hline 
+		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {No en té, no presenta punts d'inflexió.} \\  [1.5ex] \hline 
+		
+		\multicolumn{3}{|p{\textwidth}|} {\textbf{Gràfica}: 
+			
+			\begin{center}
+				\includegraphics*[width=0.8\textwidth]{solrep/57d}
+			\end{center}
+		}
+		\\  [1.5ex] \hline 
+	\end{longtable}
+\end{center}
+\newpage
+
+
+%%%%%%% RACIONAL
+\begin{center}
+	\setlength\LTleft{0pt}
+	\setlength\LTright{0pt}
+	\fontsize{10.5}{11}
+	\def\arraystretch{1.01}
+	\begin{longtable}[h]{|p{0.3\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+		\hline
+		\multicolumn{3}{|c|} { 
+			\cellcolor{lightgray} \textbf{Problema 57e) $f(x)=\dfrac{(x-1)^2}{(x+1)^3}$} }
+		\\  [1.5ex] \hline 
+		1. \textbf{Domini} & $\mathbb{R}-\{-1\}$ & Tipus: Racional  \\  [1.5ex] \hline 
+		2. \textbf{Simetries} & \multicolumn{2}{l|}{No té simetria} \\  [1.5ex] \hline 
+		3. \textbf{Talls amb els eixos}
+		
+		Talls amb l'eix OX: 
+		
+		Tall amb l'eix OY: & \multicolumn{2}{p{10cm}|}{
+			
+			$x=1$
+			\par
+			
+			$(x=0, y=1)$} \\  [1.5ex] \hline
+		
+		4. \textbf{Asímptotes} & & \\  [1.5ex] \hline 
+		Verticals: & $x=-1$  &  
+		$\limx{-1^-} f(x)=-\infty$,  \par $\limx{-1^+} f(x)=+\infty$ \\
+		[1.5ex] \hline 
+		Horitzontals: & $y=0$ &  $x\rightarrow -\infty$ per davall, \par  $x\rightarrow +\infty$ per damunt   \\  [1.5ex] \hline 
+		Obliqües: & No en té &  \\ [1.5ex] \hline   	
+		5. \textbf{Derivada primera} & \multicolumn{2}{l|} {$f'(x)=\dfrac{x^2-6x+5}{(x+1)^4 }$} \\  [1.5ex] \hline 
+		\textbf{Solucions de} $f'(x)=0$ & \multicolumn{2}{l|} {$x=1$, $x=5$} \\  [1.5ex] \hline 
+		6.  \textbf{Creixement}: & Creixent $(1,5)$ & Decreixent $(-\infty,-1)\cup(-1,1)\cup(5,+\infty)$  \\  [1.5ex] \hline  
+		7. \textbf{Extrems} & Màxim: $(x=5, y=0.074)$ & Mínim: $(x=1, y=0)$  \\  [1.5ex] \hline 
+		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=\dfrac{2x^2-20x+26}{(x+1)^5}$} \\  [1.5ex] \hline 
+		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {$x=1.5359$, $x=8.4641$ presenta dos punts d'inflexió.} \\  [1.5ex] \hline 
+		
+		\multicolumn{3}{|p{\textwidth}|} {\textbf{Gràfica}: 
+			
+			\begin{center}
+				\includegraphics*[width=0.8\textwidth]{solrep/57e}
+			\end{center}
+		}
+		\\  [1.5ex] \hline 
+	\end{longtable}
+\end{center}
+\newpage
+
+
+%%%%%%% RACIONAL
+\begin{center}
+	\setlength\LTleft{0pt}
+	\setlength\LTright{0pt}
+	\fontsize{10.5}{11}
+	\def\arraystretch{1.01}
+	\begin{longtable}[h]{|p{0.3\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+		\hline
+		\multicolumn{3}{|c|} { 
+			\cellcolor{lightgray} \textbf{Problema 57f) $f(x)=\dfrac{2x}{x^2+2}$} }
+		\\  [1.5ex] \hline 
+		1. \textbf{Domini} & $\mathbb{R}$ & Tipus: Racional  \\  [1.5ex] \hline 
+		2. \textbf{Simetries} & \multicolumn{2}{l|}{$f(-x)=-f(x)$ té simetria senar} \\  [1.5ex] \hline 
+		3. \textbf{Talls amb els eixos}
+		
+		Talls amb l'eix OX: 
+		
+		Tall amb l'eix OY: & \multicolumn{2}{p{10cm}|}{
+			
+			$x=0$
+			\par
+			
+			$(x=0, y=0)$} \\  [1.5ex] \hline
+		
+		4. \textbf{Asímptotes} & & \\  [1.5ex] \hline 
+		Verticals: & No en té  &   \\
+		[1.5ex] \hline 
+		Horitzontals: & $y=0$ &  $x\rightarrow -\infty$ per davall, \par  $x\rightarrow +\infty$ per damunt   \\  [1.5ex] \hline 
+		Obliqües: & No en té &  \\ [1.5ex] \hline   	
+		5. \textbf{Derivada primera} & \multicolumn{2}{l|} {$f'(x)=\dfrac{2x^2-4}{(x^2+2)^2 }$} \\  [1.5ex] \hline 
+		\textbf{Solucions de} $f'(x)=0$ & \multicolumn{2}{l|} {$x=\pm \sqrt{2}$} \\  [1.5ex] \hline 
+		6.  \textbf{Creixement}: & Creixent $(-\sqrt{2},\sqrt{2})$ & Decreixent $(-\infty,-\sqrt{2})\cup(\sqrt{2},+\infty)$  \\  [1.5ex] \hline  
+		7. \textbf{Extrems} & Màxim: $(x=\sqrt{2}, y=0.707)$ & Mínim: $(x=-\sqrt{2}, y=-0.707)$  \\  [1.5ex] \hline 
+		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=\dfrac{(4x^3-24x)}{(x^2+2)^3}$} \\  [1.5ex] \hline 
+		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {$x=0$, $x=\pm 2.45$ presenta tres punts d'inflexió.} \\  [1.5ex] \hline 
+		
+		\multicolumn{3}{|p{\textwidth}|} {\textbf{Gràfica}: 
+			
+			\begin{center}
+				\includegraphics*[width=0.8\textwidth]{solrep/57f}
+			\end{center}
+		}
+		\\  [1.5ex] \hline 
+	\end{longtable}
+\end{center}
+\newpage
+
+
+\end{document} 
