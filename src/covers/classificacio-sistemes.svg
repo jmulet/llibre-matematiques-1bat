@@ -1,0 +1,94 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
+    version="1.1" baseProfile="full">
+    <g>
+        <g latexdraw:type="text" id="id1946871206" fill="black" latexdraw:position="bl">
+            <text x="69.0" y="145.0">Sistema</text>
+        </g>
+        <g latexdraw:type="text" id="id557657680" fill="black" latexdraw:position="bl">
+            <text x="187.0" y="102.0">Compatible</text>
+        </g>
+        <g latexdraw:type="text" id="id717257755" fill="black" latexdraw:position="bl">
+            <text x="190.0" y="197.0">Incompatible</text>
+        </g>
+        <g latexdraw:type="text" id="id1030867454" fill="black" latexdraw:position="bl">
+            <text x="349.0" y="63.0">Determinat</text>
+        </g>
+        <g latexdraw:type="text" id="id9427061" fill="black" latexdraw:position="bl">
+            <text x="345.0" y="142.0">Indeterminat</text>
+        </g>
+        <g latexdraw:type="joinedLines" id="id1302437923">
+            <polyline points="140.0,140.0 180.0,100.0 180.0,100.0 "
+                stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id2147247761">
+            <polyline points="140.0,140.0 180.0,180.0 180.0,180.0 "
+                stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id178714192">
+            <polyline points="280.0,100.0 340.0,60.0 340.0,60.0 "
+                stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id2002541038">
+            <polyline points="280.0,100.0 340.0,140.0 340.0,140.0 "
+                stroke-width="2.0" stroke="black" fill="none" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="text" id="id521218600" fill="black" latexdraw:position="bl">
+            <text x="459.0" y="63.0">1 soluci\'o</text>
+        </g>
+        <g latexdraw:type="text" id="id1072458241" fill="black" latexdraw:position="bl">
+            <text x="460.0" y="140.0">$\infty$ solucions</text>
+        </g>
+        <g latexdraw:type="text" id="id12253717" fill="black" latexdraw:position="bl">
+            <text x="310.0" y="194.0">No t\'e soluci\'o </text>
+        </g>
+        <g latexdraw:type="rectangle" id="id754881033">
+            <rect x="61.0" y="121.0" width="78.0" height="38.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id989111228">
+            <rect x="179.0" y="74.0" width="102.0" height="38.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id337025758">
+            <rect x="182.0" y="168.0" width="116.0" height="38.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id1647817225">
+            <rect x="340.0" y="38.0" width="102.0" height="38.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id1053780477">
+            <rect x="341.0" y="117.0" width="109.0" height="38.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+    </g>
+    <defs/>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:latexIncludes/>
+            <latexdraw:displayXScale>true</latexdraw:displayXScale>
+            <latexdraw:displayYScale>true</latexdraw:displayYScale>
+            <latexdraw:unit>CM</latexdraw:unit>
+            <latexdraw:zoom>1.0</latexdraw:zoom>
+            <latexdraw:magneticGridStyle>CUSTOMISED</latexdraw:magneticGridStyle>
+            <latexdraw:gridGap>20</latexdraw:gridGap>
+            <latexdraw:magneticGrid>false</latexdraw:magneticGrid>
+            <latexdraw:version>3.3.4</latexdraw:version>
+            <latexdraw:size>
+                <latexdraw:width>2560</latexdraw:width>
+                <latexdraw:height>1330</latexdraw:height>
+            </latexdraw:size>
+            <latexdraw:position>
+                <latexdraw:x>0.0</latexdraw:x>
+                <latexdraw:y>23.0</latexdraw:y>
+            </latexdraw:position>
+        </latexdraw:metadata>
+    </metadata>
+</svg>

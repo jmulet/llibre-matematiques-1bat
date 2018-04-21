@@ -1,0 +1,29 @@
+{
+  "name": "llibre-matematiques-1bat",
+  "version": "3.0.0",
+  "description": "Llibre de matemàtiques de 1r batxillerat de ciències",
+  "main": "index.js",
+  "scripts": {
+    "student-genkeys": "node ./src/scripts/generate-student-keys.js",
+    "draft-compile": "pdflatex -draftmode -interaction=batchmode -output-directory=dist src/main.tex",
+    "student-book": "npm run-script draft-compile && npm run-script student-genkeys && npm run-script draft-compile && pdflatex -output-directory=dist src/main.tex",
+    "teacher-book": "",
+    "answers-book": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmulet/llibre-matematiques-1bat.git"
+  },
+  "keywords": [
+    "Matemàtiques",
+    "Llibre",
+    "LaTeX"
+  ],
+  "author": "Josep Mulet",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jmulet/llibre-matematiques-1bat/issues"
+  },
+  "homepage": "https://github.com/jmulet/llibre-matematiques-1bat#readme"
+}

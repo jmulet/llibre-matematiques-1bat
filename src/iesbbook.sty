@@ -1,0 +1,980 @@
+%  Paquet LaTeX per crear llibres de matemàtiques a l'IES Binissalem
+% 
+% (c) Josep Mulet Pol
+%	pep.mulet@gmail.com
+%
+%% This program can be redistributed and/or modified under the terms
+%% of the LaTeX Project Public License Distributed from CTAN archives
+%% in directory macros/latex/base/lppl.txt.
+% 
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{iesbbook}
+[2017/04/23 v1.0 Paquet LaTeX per crear llibres de matemàtiques a l'IES Binissalem]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%					C A R R E G A     D E     P A Q U E T S
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\RequirePackage[catalan]{babel}	% carrega el paquet d'idioma 
+\RequirePackage{verbatim}
+\RequirePackage{ifthen}
+\RequirePackage{float}			%millora el posicionament de taules i figures
+\RequirePackage{multicol}		%permet utilitzar multicolumnes
+\RequirePackage{fancyhdr}		%creació d'encapçalaments i peu de pagina
+\RequirePackage{fancybox}		%inline frames ovalbox shadowbox etc.
+\RequirePackage{geometry}		%administra la mida de pagina, marges, etc  [showframe]
+\RequirePackage{tasks}			%permet crear apartats d'una activitat: a)	b)	c)
+\RequirePackage{wrapfig}		%permet incrustar figures enmig de text 
+\RequirePackage{adjustbox}
+\RequirePackage{color, colortbl} %paquets de color i color en taules
+\RequirePackage[framemethod=TikZ]{mdframed}	%paquet per crear requadres de color. Carrega la part grafica TikZ
+\usetikzlibrary{shadows}
+\RequirePackage{shadowtext, diagbox}     %Fa sombres al text
+\RequirePackage{tikzpagenodes}
+\RequirePackage{pgfplots}		%plots en latex
+\usetikzlibrary{calc}
+\RequirePackage{titlesec}		%configuració de titols
+\RequirePackage{enumerate}
+\RequirePackage{dingbat}       		 %Permet utilitzar simbols de dibuixets com llapis
+
+\RequirePackage{lmodern}			% Millora de font
+\RequirePackage{amssymb,amsmath}	% ampliació de matematiques
+\RequirePackage[makeroom]{cancel}   % aquest paquet permet tatxar elements
+
+\RequirePackage{fixltx2e} 			% provides \textsubscript
+%\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8x]{inputenc}		% Permet escriure accents etc en latex sense haver-los de "escape"
+\RequirePackage{eurosym}		
+
+\RequirePackage{needspace}			%requereix espai perque no salti de pagina una activitat
+\RequirePackage{minitoc}			% Permet incloure taula de continguts en cada capitol
+\setcounter{minitocdepth}{1}
+\mtcsettitle{minitoc}{} %%Index
+
+
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\RequirePackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\RequirePackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+
+\RequirePackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\RequirePackage{footnote}\makesavenoteenv{long table}}{}
+\RequirePackage{graphicx, grffile}
+\RequirePackage{adjustbox}% http://ctan.org/pkg/adjustbox
+
+
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+	\RequirePackage{parskip}
+}{% else
+	\setlength{\parindent}{0pt}
+	\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\RequirePackage{xr-hyper}
+\RequirePackage{url}
+	
+%%%% IMPORTANT : Per evitar conflictes, carregar hyperref com darrer paquet	
+\RequirePackage[unicode=true, pdfauthor=Josep Mulet, pdftitle= Matematiques-I, bookmarks=true, extension= pdf, colorlinks=false, debug=false, pagebackref]{hyperref}
+\hypersetup{
+	pdfborder={0 0 0},
+	breaklinks=true
+}
+\urlstyle{same}  % don't use monospace font for urls
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			E S T I L S 		I 		C O N F I G U R A C I Ó
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newsavebox{\provabox}
+%\newlength{\provaboxheight}
+%
+%\newenvironment{prova}{
+%\setbox\provabox\vbox{ 
+ %%
+%}{
+%		}
+ %%
+%\setlength{\provaboxheight}{\ht\provabox}
+%Principi. . Fi \showthe\provaboxheight
+%\usebox0
+%}
+
+
+% Gestiona les opcions d'aquest paquet
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newif\ifisdraft
+
+\newif\ifisbn
+
+\DeclareOption{draft}{\isdrafttrue}
+\DeclareOption{bn}{\isbntrue}
+\ProcessOptions\relax
+
+\definecolor{blue}{rgb}{0,0,0.7}
+
+\ifisdraft
+	\RequirePackage{draftwatermark}
+\fi
+
+	\definecolor{darkBlueColorTwo}{rgb}{0,0,0.8}
+	\definecolor{blueColorTwo}{rgb}{0,0,1}
+\ifisbn
+	\definecolor{theoryBgColor}{gray}{0.96}
+	\definecolor{darkBlueColor}{gray}{0.1}
+	\definecolor{blueColor}{gray}{0.3}
+	\definecolor{redColor}{gray}{0.5}
+	\definecolor{darkRedColor}{gray}{0.3}
+	\definecolor{greenColor}{gray}{0.9}
+	\definecolor{lightGreenColor}{gray}{0.93}
+	\definecolor{darkGreenColor}{gray}{0.4}
+	\definecolor{exampleFrom}{gray}{1}
+	\definecolor{exampleTo}{gray}{0.93}
+	\definecolor{exampleColor}{gray}{0.93}
+	%\newcommand{\href}[2]{#2}
+	%%\selectcolormodel{gray}
+\else
+	\colorlet{theoryBgColor}{yellow!20!white}
+ 	\colorlet{exampleFrom}{green!2}
+	\colorlet{exampleTo}{green!30}
+	\definecolor{exampleColor}{rgb}{0.85,1.0,0.8}
+ 	\definecolor{blueColor}{rgb}{0,0,1}
+	\definecolor{darkBlueColor}{rgb}{0,0,0.8}
+	\definecolor{redColor}{rgb}{1,0,0}
+	\definecolor{darkRedColor}{rgb}{0.6,0,0}
+	\definecolor{greenColor}{rgb}{0,1,0}
+	\definecolor{lightGreenColor}{rgb}{0.8,1,0.55}
+	\definecolor{darkGreenColor}{rgb}{0,0.25,0}
+\fi
+
+ 
+	
+%%%% Tradueix al català alguns items
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\chaptername}{Tema}
+\renewcommand{\figurename}{Figura}
+
+%%% DEFINEIX LA MIDA DE LA PAGINA, MARGES, ETC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{a4paper,total={170mm,257mm},left=30mm,right=23mm,top=30mm,bottom=30mm}
+%\renewcommand{\evensidemargin}{0.5in}
+%\renewcommand{\oddsidemargin}{0.5in}
+
+%%%% Configura l'aspecte de les multicolumnes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\columnsep}{0.5cm}
+\setlength{\columnseprule}{0.2pt}
+
+
+%%%% Configura els encapçalaments i peus de pàgina
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fancyhead{} % clear all header fields
+%\fancyhead[RE]{\chapter}
+%\fancyhead[LO]{\rightmark}
+\fancyhead[LE,RO]{\large\textcolor{darkBlueColor}{\shadowbox{\fontfamily{phv}\selectfont\textbf{\, \thepage \,}}}}
+\fancyfoot{} % clear all footer fields
+\renewcommand{\headrulewidth}{0.4pt}
+
+%bloc fancy is used in non chapter sections like \chapter*{bla bla}
+\fancypagestyle{blocfancy}{
+	\pagestyle{fancy}% Duplicate fancy page style
+	\fancyhead{} % clear all header fields
+	\fancyhead[RE]{{ \fontfamily{phv}\selectfont \textit{\currentname}}}
+	\fancyhead[LE,RO]{\large\textcolor{darkBlueColor}{\shadowbox{\fontfamily{phv}\selectfont\textbf{\, \thepage \,}}}}
+}
+
+% Redefine the plain page style for the first page in chapter
+\fancypagestyle{plain}{%
+	\fancyhf{}%
+	\fancyfoot[C]{\textcolor{darkBlueColor}{\shadowbox{\small\fontfamily{phv}\selectfont\textbf{\, \thepage \,}}}}%
+}
+
+\fancypagestyle{myheadings}{%
+	\fancyhf{}%
+	\renewcommand{\headrulewidth}{0pt}
+	\fancyfoot[C]{\scshape{\thepage}}%
+}
+
+%%%% Configuració del paquet tasks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\settasks{
+	after-item-skip = 0.5ex plus 0.5ex minus 0.5ex
+}
+
+
+%%%%% Definició de FONTS I COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+%Select the letter font to be used thorought the document
+\renewcommand{\familydefault}{put}  % utopia
+%\renewcommand{\familydefault}{pnc} % new century schoolbook
+%\renewcommand{\familydefault}{ptm} % times
+
+\renewcommand{\normalsize}{\fontsize{11}{13.2}\selectfont}
+\renewcommand{\small}{\fontsize{8.5}{11}\selectfont}
+\renewcommand{\footnotesize}{\fontsize{8.5}{11}\selectfont}
+%\DeclareMathVersion{normal} % la font matematica surt un poc petita
+\DeclareMathSizes{11}{12}{7.4}{6}  %el primer ha de coincidir amb el \selectfont
+ 
+\definecolor{myred}{rgb}{0.5822,0.0078,0.0078}
+\definecolor{gris}{rgb}{0.4,0.4,0.4}
+\definecolor{smoke}{rgb}{0.9,0.9,0.9}
+\definecolor{lightgray}{rgb}{0.89, 0.89, 0.89} 
+\newcommand{\gris}[1]{\textcolor{gris}{#1}}
+
+\newcommand{\fcourier}[2]{\usefont{OT1}{pcr}{#1}{#2}}
+\newcommand{\fbookman}[2]{\usefont{OT1}{pbk}{#1}{#2}}
+\newcommand{\fschoolbook}[2]{\usefont{OT1}{pnc}{#1}{#2}}
+\newcommand{\fhelvetica}[2]{\usefont{OT1}{phv}{#1}{#2}}
+\newcommand{\fpalatino}[2]{\usefont{OT1}{ppl}{#1}{#2}}
+\newcommand{\ftimes}[2]{\usefont{OT1}{ptm}{#1}{#2}}
+\newcommand{\fpzd}[2]{\usefont{OT1}{pag}{#1}{#2}}
+
+
+
+%%%%% DEFINICIÓ DE REQUADRES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pgfdeclarehorizontalshading{examplebackground}{100bp}
+{color(0bp)=(exampleFrom); color(100bp)=(exampleTo)}
+\pgfdeclarehorizontalshading{warningbackground}{100bp}
+{color(0bp)=(red!2); color(100bp)=(red!25)}
+\pgfdeclarehorizontalshading{bluebackground}{100bp}
+{color(0bp)=(blue!1); color(100bp)=(blue!5)}
+\pgfdeclarehorizontalshading{graybackground}{100bp}
+{color(0bp)=(gray!1); color(100bp)=(gray!15)}
+
+
+\tikzset{titregris/.style =
+	{draw=gray, thick, fill=white, %
+		text=gray, rectangle, rounded corners, right,minimum height=.7cm}}
+
+
+\mdfdefinestyle{ExampleFrameStyle}{
+	linecolor=gray,
+	outerlinewidth=0pt,
+	roundcorner=1pt,
+	innertopmargin=5pt,
+	innerbottommargin=5pt,
+	innerrightmargin=5pt,
+	innerleftmargin=5pt,
+	%backgroundcolor=green!10!white,
+	apptotikzsetting={\tikzset{mdfbackground/.append style ={%
+				shading = examplebackground}}},
+}
+
+\mdfdefinestyle{TheoryFrameStyle}{%
+	topline=false,
+	bottomline=false,
+	rightline=false,
+	linewidth=3pt,
+	linecolor=redColor,
+	innerleftmargin=5pt,
+	leftmargin=10pt,
+	rightmargin=5pt,
+	innerrightmargin=5pt,
+	backgroundcolor=theoryBgColor,
+	shadow=true,
+	shadowsize=5pt 
+}
+
+\mdfdefinestyle{WarningFrameStyle}{%
+	linewidth=4pt,
+	linecolor=redColor,
+	innerleftmargin=5pt,
+	leftmargin=10pt,
+	rightmargin=5pt,
+	innerrightmargin=5pt,
+	%backgroundcolor=red!20!white
+	apptotikzsetting={\tikzset{mdfbackground/.append style ={%
+				shading = warningbackground}}},
+}
+
+\mdfdefinestyle{BlueShadedFrameStyle}{%
+	linewidth=1pt,
+	linecolor=blueColor,
+	innerleftmargin=5pt,
+	leftmargin=10pt,
+	roundcorner=2pt,
+	rightmargin=5pt,
+	innerrightmargin=5pt,
+	%backgroundcolor=red!20!white
+	apptotikzsetting={\tikzset{mdfbackground/.append style ={%
+				shading = bluebackground}}},
+	shadow=true,
+	shadowsize=5pt 
+}
+
+
+\newenvironment{theorybox}[1][]{
+	\ifstrempty{#1}{
+	}{
+		\mdfsetup{
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,draw=redColor, line width=1pt, fill=white]
+				{\strut #1};}}%	
+	}
+	\mdfsetup{
+		topline=false,
+		bottomline=false,
+		rightline=false,
+		linewidth=3pt,
+		linecolor=redColor,
+		innerleftmargin=5pt,
+		leftmargin=10pt,
+		rightmargin=5pt,
+		innerrightmargin=5pt,
+		backgroundcolor=theoryBgColor,
+		shadow=true,
+		shadowsize=5pt,
+		frametitleaboveskip=-10pt
+	}
+	\begin{mdframed}[]\relax%
+		\ftimes{12}{13}
+	}
+	{
+	\end{mdframed}
+}
+
+
+\newenvironment{example}[1][]{
+ 	\mdfsetup{
+		linecolor=gray,
+		outerlinewidth=0pt,
+		roundcorner=1pt,
+		innertopmargin=5pt,
+		innerbottommargin=5pt,
+		innerrightmargin=5pt,
+		innerleftmargin=5pt,
+		%backgroundcolor=green!10!white,
+		apptotikzsetting={\tikzset{mdfbackground/.append style ={%
+					shading = examplebackground}}},
+	}
+	\ifstrempty{#1}{
+		\mdfsetup{		
+			singleextra={
+				\fill[darkGreenColor] (O|-P) rectangle ([xshift=-15pt]O);
+				\node[overlay,anchor=south east,rotate=90,font=\color{white}\small\bf\scshape] at (O|-P) {Exemple};
+			},
+			firstextra={
+				\fill[darkGreenColor] (O|-P) rectangle ([xshift=-15pt]O);
+				\node[overlay,anchor=south east,rotate=90,font=\color{white}\small\bf\scshape] at (O|-P) {Exemple};
+			},
+		}
+	}{}
+ 	%%
+ 	\hspace*{-1cm}
+	\begin{mdframed}[]\relax%
+		\ftimes{12}{13}
+	}
+	{
+	\end{mdframed}
+}
+
+
+\newenvironment{tip}{\begin{theorybox}[Recorda]}{\end{theorybox}}
+
+%\newenvironment{example}[1][]{\begin{mdframed}[style=ExampleFrameStyle]
+%		\ftimes{12}{13} \ifstrempty{#1}{}{\bfseries Exemple:}}{\end{mdframed}}
+
+\newenvironment{warningbox}{\begin{mdframed}[style=WarningFrameStyle]
+		\ftimes{12}{13}\begin{minipage}[c]{0.1\textwidth} \includegraphics[width=0.75\textwidth]{img-base/warning}\end{minipage}\begin{minipage}{0.9\textwidth}  }{\end{minipage}\end{mdframed}}
+
+\newenvironment{blueshaded}{\ftimes{12}{13}\begin{mdframed}[style=BlueShadedFrameStyle]}{\end{mdframed}}
+
+
+
+\newcommand{\sample}[1]{
+	\begin{mdframed}[style=ExampleFrameStyle]
+	\ftimes{12}{13} #1 \end{mdframed}
+	\\ [-2.2ex]
+}
+
+
+
+%%%% ENUMERACIONS QUE CONTINUEN DINS DEL TEMA \begin{mylist} \item ...	\end{mylist}
+%% es reinicia amb \setcounter{myenumi}{0}, es reinicia automàticament despres de cada capitol
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength\itemsep{2em}	%%Separació entre items de llistes
+
+\newcounter{myenumi}[chapter]
+\setcounter{myenumi}{0}
+
+
+\newenvironment{mylist}{	
+	%%Estil de l'enumeració de la llista mylist
+	\renewcommand{\labelenumi}{\textcolor{darkBlueColor}{{\large{\bfseries{\fontfamily{phv}\selectfont\arabic{enumi}.} }}}}
+	\begin{enumerate} \setlength\itemsep{0.5em} \setcounter{enumi}{\themyenumi}}{ \setcounter{myenumi}{\theenumi}\end{enumerate}}
+
+\newenvironment{icolist}{	
+	%%Estil de l'enumeració de la llista mylist
+	\renewcommand{\labelenumi}{\Large{\bfseries{\ding(\arabic{enumi}).} }}
+	\begin{enumerate} \setlength\itemsep{0.5em}}{ \end{enumerate} }
+
+\newcommand{\fakechapter}[2][]{	
+	\vspace*{2cm}
+	\def\currentname{#2}
+	{\fontfamily{phv}\selectfont \bfseries\Huge
+		\color{darkBlueColor}\titlerule\vspace{1ex}\filleft \shadowrgb{1,1,1} #1 \shadowtext{\uppercase{#2}}
+		
+		\vspace{1ex}\titlerule}\vspace{1cm}}
+
+\newcommand{\partsintesi}[2]{
+	\pagestyle{blocfancy}
+	\clearemptydoublepage
+	\thispagestyle{empty}
+	\setcounter{myenumi}{0}
+	%%
+	\fakechapter{#1}
+	%%
+	%\pagestyle{blocfancy}
+	%\thispagestyle{plain}
+	%\addcontentsline{toc}{chapter}{#1}
+	\mtcaddchapter[#1]
+	\def\isPartSintesi{\thepart}
+	\decorateBlocLeft
+	%
+	\setcounter{auxExerId}{\thecurrentExerId}
+	\stepcounter{auxExerId}
+	%
+	\subsection*{\hyperref[ans:\theauxExerId]{#2 \simbolclau} }
+	\def\currentname{#1}
+}
+
+
+
+%%%%% Crea fitxers auxiliars per les solucions
+\def\answertype{0}
+\newcounter{currentExerId}
+\newcounter{auxExerId}
+\def\isPartSintesi{}
+ 
+
+\newif\ifinactivities
+%%%% Definició d'un exercici i les seves solucions
+\newcommand{\exer}[1][]{
+	\stepcounter{currentExerId}
+	\ifinactivities \else
+		\needspace{3\baselineskip}
+	\fi
+	\ifstrempty{#1}{
+		\def\answertype{0}  
+		\item  	
+	}{
+	    \def\answertype{#1}
+	    \item \label{exer:\thecurrentExerId}
+		\ifnum#1=1
+		 	\hyperref[ans:\thecurrentExerId]{\simbolclau} 
+		\else
+			\ifnum#1=-1
+			   \hyperref[ans:\thecurrentExerId]{\simbolcompass}
+			 \fi
+		\fi
+	}
+}
+
+\newcommand{\answers}[2][]{
+	%Crea index respostes seleccionades per l'alumnat nomes
+	\ifsolucionari	
+		\immediate\write\studentkeys{\string{"chap":\thechapter, "page": \thepage, "exer": \theenumi, "ans": "\unexpanded{#2}", "part":"\isPartSintesi", "type": \answertype, "id":"\thecurrentExerId",  "opts": "\unexpanded{#1}" \string}, }
+		\immediate\write\studentkeys{}
+	\fi
+}
+	
+%%	(optional) #1 options, #2 exer name, #3 type, #4 answer
+\newcommand{\addanswersline}[4][]{
+	\ifsolucionari	
+		\stepcounter{currentExerId}
+		\immediate\write\studentkeys{\string{"chap":\thechapter, "page": \thepage, "exer": "\unexpanded{#2}", "ans": "\unexpanded{#4}", "part":"0", "type": \unexpanded{#3}, "id":"\thecurrentExerId",  "opts": "\unexpanded{#1}" \string}, }
+		\immediate\write\studentkeys{}
+	\fi
+}
+
+
+
+\newif\ifsolucionari
+\solucionarifalse
+
+\newcommand{\makesolucionari}{
+	\solucionaritrue
+	\newwrite\studentkeys
+	\immediate\openout\studentkeys=studentkeys.ans
+}
+
+\newcommand{\printsolucionari}{
+	\IfFileExists{./studentkeys.tex}{
+		\def\currentname{Solucionari}
+		\fakechapter[\simbolclaubig]{ Solucions }
+		\addcontentsline{toc}{part}{SOLUCIONS}
+		\begin{multicols}{2}
+			\fontsize{10.5}{12.6}\selectfont
+			\InputIfFileExists{file}{then-code}{}
+			\input{studentkeys}
+		\end{multicols} 
+	}
+	{}
+}
+
+%%%% Espai per exercicis resolts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newenvironment{noexerbreak}{\begin{minipage}{1.01\textwidth}}{\end{minipage}}
+
+
+\newcounter{resoltcount}[chapter]
+\newenvironment{resolt}[2][]{
+	\begin{center}
+		\setlength\LTleft{-5pt}
+		\setlength\LTright{5pt}
+		\fpalatino{10.5}{11}
+		\fontsize{10.5}{11}
+		\arrayrulecolor{darkGreenColor}
+		\begin{longtable}[h]{|p{0.3\textwidth}| p{0.7\textwidth}}
+			
+			\ifstrempty{#1}{
+				\hline 
+			}{%
+				\cellcolor{darkGreenColor}\color{white}\textbf{Exercici Resolt} & \\ \toprule
+			}% 
+			\cellcolor{lightGreenColor}\noindent \refstepcounter{resoltcount} 
+			{\noindent\large\textbf{\color{darkRedColor}\theresoltcount.}} {\fpalatino{10.5}{11}\fontsize{10.5}{11}  #2}  &    
+		}
+		{	
+			\\ [0.5ex] \bottomrule\end{longtable}\end{center}
+	\arrayrulecolor{black}
+	\vspace{-0.75cm}
+}
+
+%%%%%%  FORMATACIO DEL CAPITOL, SECCIONS, etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\heading}[2][darkBlueColor]{\textcolor{#1}{\Large \bfseries \fontfamily{phv}\selectfont \shadowtext{#2}}}
+
+%Permet que un nou tema comenci en pagina parell (és a dir de l'esquerra)  
+
+\newcommand*\cleartorightpage{%
+	\clearpage
+	\ifodd\value{page}\else\hbox{}\newpage\fi
+}
+
+\newcommand*\cleartoleftpage{%
+	\clearpage
+	\ifodd\value{page}\hbox{}\newpage\fi
+}
+
+\newcommand{\clearemptydoublepage}{%
+	\newpage{\pagestyle{empty}\cleartoleftpage}
+}
+
+
+
+\titleformat{\chapter}[display]
+{\fontfamily{phv}\selectfont \bfseries\Huge}
+{\color{red}\filright\huge{\shadowrgb{1,1,1} \shadowtext{Tema {\fontsize{30}{40}\selectfont \thechapter}}}}
+{1ex}
+{\color{darkBlueColorTwo}\titlerule\vspace{1ex}\filleft \shadowrgb{1,1,1} \shadowtext}
+[\vspace{1ex}\color{darkBlueColorTwo}\titlerule]
+
+
+\newcommand{\mypart}[3][]{
+	\thispagestyle{empty}
+	\clearemptydoublepage
+	\thispagestyle{empty}
+	\pagestyle{plain}
+	\fancyhead{} % clear all header fields
+	\fancyfoot{} % clear all footer fields
+	\fancyfoot[C]{\textcolor{darkBlueColor}{\shadowbox{\small\fontfamily{phv}\selectfont\textbf{\, \thepage \,}}}}%
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\thepage}{\arabic{page}}% numerals for page counter
+	
+	\refstepcounter{part}
+	\addcontentsline{toc}{part}{PART \thepart:\quad #2}
+	\vspace*{2cm}
+	
+{
+	\fontfamily{phv}\selectfont	
+	\bfseries\Huge  
+	\shadowrgb{0.5,0.5,0.5}
+	\shadowoffset{1pt}	
+	{\color{red} \fontsize{35}{45}\selectfont \shadowtext{Part\, \thepart}}
+	
+	\vspace{1ex}\titlerule
+	\vspace{0.15ex}\titlerule
+	
+	\vspace{1ex}
+	
+	\begin{center} 
+		\textcolor{darkBlueColor}{ \bfseries \Huge #2 }
+	\end{center} 
+}
+	\vspace*{\fill}
+ 
+	\begin{center}
+		\includegraphics[width=0.97\textwidth]{#3}
+	\end{center}
+ 
+	
+	\vspace*{\fill}
+	{\color{red}
+	\begin{flushright}\small \emph{#1}\end{flushright}	
+	%\vspace{1ex}\titlerule
+	%\vspace{0.25ex}\titlerule
+	}
+	\newpage
+}
+ 
+
+\let\oldsection\section
+\renewcommand{\section}[2][]{\def\currentname{#2}
+	\ifstrempty{#1}{
+	 \oldsection{#2}
+	}{
+	 \oldsection[#1]{#2}
+	}
+}
+
+
+
+
+\newcommand{\mychapter}[4]{
+	\def\isPartSintesi{}
+	\clearemptydoublepage
+	\begin{tikzpicture}[remember picture, overlay] 
+	\node[anchor=south west, inner sep=0pt] at (-65pt,-80pt) { \includegraphics[width=\paperwidth]{img-base/background}}; 
+	\draw[red, line width=4pt] (-10cm,-2.8cm) -- (30cm, -2.8cm);
+	\end{tikzpicture}
+	\begin{minipage}[c]{0.3\textwidth}
+		#3
+	\end{minipage}
+	\begin{minipage}[c]{0.7\textwidth}
+		\chapter[#2]{#1}
+		\label{#4}
+	\end{minipage} 
+	%%	
+	\thispagestyle{plain}
+	\pagestyle{fancy}
+	\fancyhead{} % clear all header fields
+	\fancyhead[LE,RO]{\large\textcolor{darkBlueColor}{\shadowbox{\fontfamily{phv}\selectfont\textbf{\, \thepage \,}}}}
+	\fancyfoot{} % clear all footer fields
+	\renewcommand{\headrulewidth}{0.4pt}
+	\fancyhead[LO]{{ \fontfamily{phv}\selectfont Tema \thechapter. \  #2}}
+	\fancyhead[RE]{{ \fontfamily{phv}\selectfont \textit{\currentname}}}
+	\renewcommand{\thepage}{\arabic{page}}% numerals for page counter
+	\vspace{-0.5cm}
+	
+	
+	\heading[blue]{Índex}	
+	\hspace{-0.5cm}
+	\minitoc
+}
+
+\newenvironment{iniaval}{
+ 	\heading[blue]{Avaluació inicial} \hfill  \textcolor{blue}{ Nota: \framebox(25,20){\hspace{1cm}} }
+	\begin{blueshaded}
+}{
+	\end{blueshaded}
+}
+ 
+\newlength{\separa}
+\newlength{\total}
+\setlength{\separa}{12pt}
+	
+\newenvironment{autoaval}[1]{
+	\def\currentname{Autoavaluació}
+	\setcounter{myenumi}{0}
+	%%
+	\setlength{\total}{#1\separa}
+	\addtolength{\total}{2\separa}
+	%%
+	\begin{tikzpicture}[remember picture,overlay]
+	\foreach \fila in {0,...,#1}
+	{
+		\draw [line width=1pt,color=lightgray,opacity=0.7] 
+		(0pt,-\fila*\separa) -- ++(1.02\textwidth,0);
+	}
+	\node[inner sep=0pt] (espiral) at (0.5\textwidth,0)
+	{\hspace{0.05\textwidth}\includegraphics[width=1.02\textwidth, height=1cm, keepaspectratio=false]{img-base/espiral.png}};
+	\draw[line width=1pt, color=red, opacity=0.3] (22pt, 0pt) -- (22pt,-\total);
+	\draw[line width=1pt, color=gray] (0pt, 0pt) -- (0pt,-\total);
+	\draw[line width=3pt, color=gray] (1.02\textwidth, 0pt) -- (1.02\textwidth,-\total);
+	\draw[line width=3pt, color=gray] (0pt, -\total) -- (1.02\textwidth,-\total);
+	\end{tikzpicture}%
+	%%
+	\vspace{0.5cm}
+	\begin{center}
+		\setcounter{auxExerId}{\thecurrentExerId}
+		\stepcounter{auxExerId}
+		\label{exer:\theauxExerId}
+		\heading{Autoavaluació}  \hyperref[ans:\theauxExerId]{ \simbolclau}	
+	\end{center}
+
+	\addanswersline{Autoavaluació:}{0}{}
+}{}
+
+\newcommand{\resum}{
+	\begin{center}
+			\heading{Resum}
+	\end{center}
+	\def\currentname{Resum}
+}
+
+\newenvironment{activitats}{\section{Activitats}
+	\inactivitiestrue
+	\begin{multicols}{2}
+		\fontsize{10.5}{11.1}}{\end{multicols}\normalsize
+		\inactivitiesfalse
+		\def\currentname{Autoavaluació}	
+}
+
+
+
+
+%%% Incloure enllaços a vídeos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\videonw}[2]{
+
+	\begin{minipage}[c]{2cm}
+		%check if thumbanail is present, if not use fallback
+		\href{https://piworld.es/\#!/home/activities/#1/0/}{
+			\IfFileExists{img-00/video-#1.jpg}{
+				\includegraphics[height=2cm]{img-00/video-#1.jpg} 	
+			}{
+				\includegraphics[height=1.25cm]{img-00/video.png} 	
+			}
+		}
+	\end{minipage}
+	\begin{minipage}[c]{0.85\textwidth}
+			{\footnotesize {\bfseries Vídeo #1}:  \emph{#2}}
+	\end{minipage}
+}
+
+
+\newcommand{\video}[3][]{
+	\ifstrempty{#1}{
+	 	\begin{wrapfigure}[6]{L}{3.5cm}
+	 }{
+  		\begin{wrapfigure}[#1]{L}{3.5cm}	
+	}
+	 	\vspace{-0.5cm} 
+	 	\begin{center}
+		%check if thumbanail is present, if not use fallback
+		\href{https://piworld.es/\#!/home/activities/#2/0/}{
+			\IfFileExists{img-00/video-#2.jpg}{
+				\includegraphics[height=1.5cm]{img-00/video-#2.jpg} 	
+			}{
+				\includegraphics[height=1.5cm]{img-00/video.png} 	
+			}
+		}
+	
+		{\footnotesize {\bfseries Vídeo #2}:  \emph{#3}}
+		\end{center} 
+		\vspace{-0.5cm}
+	\end{wrapfigure}
+} 
+
+\def\simbolclau{\includegraphics[width=0.4cm]{img-base/key.pdf} }
+\def\simbolclaubig{\includegraphics[width=1cm]{img-base/key.pdf} }
+\def\simbolcompass{\includegraphics[width=0.4cm]{img-base/bruixola} }
+\def\simbolsearch{\includegraphics[width=0.4cm]{img-base/search} }
+\newcommand{\clau}[1]{\simbolclau\label{#1}}
+\newcommand{\clauref}[1]{{\bfseries \large \ref{#1}}. }
+\newcommand{\solclau}{
+	\section*{\simbolclau SOLUCIONS ALS PROBLEMES CLAU}}
+\newcommand{\key}[1]{\label{#1} \simbolclau{}}
+
+
+
+\newcommand{\myrepeat}[2]{%
+	\newcount\foo
+	\foo=#1
+	\loop
+	#2
+	\advance \foo -1
+	\ifnum \foo>0
+	\repeat
+}
+
+\newcommand{\hot}[1][]{
+	\ifthenelse{\equal{#1}{}}{$\mathbf{\bigstar}$}{\myrepeat{#1}{$\mathbf{\bigstar}$}}
+}
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\setcounter{chapter}{0}
+
+\newmdenv[innerlinewidth=0.5pt, roundcorner=4pt,linecolor=blueColorTwo,innerleftmargin=6pt, innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{bluebox}
+
+
+%\titleformat
+%{\section} % command
+%[hang] % shape
+%{\fontfamily{phv}\selectfont\bfseries\Large} % format
+%{\thesection.} % label
+%{0.5ex} % sep	
+%{	 	
+%} % before-code 
+%[
+%	\vspace{0.5ex}%
+%] % after-code
+
+\titleformat{\section}
+{\fontfamily{phv}\selectfont\bfseries\Large\color{darkBlueColor}}
+{\hspace{0.7cm}\llap{\colorbox{darkBlueColor}{\makebox[3em][r]  { \textcolor{white}{\thesection}} }\hspace{0.5em}}}
+{0em}{}[\vspace{-1.45em}\hspace{-2.8em}\textcolor{darkBlueColor}{\rule{17cm}{1.5pt}}]
+
+\titleformat 
+{\subsection} % command
+[hang] % shape
+{\fontfamily{phv}\selectfont\bfseries\large\color{darkBlueColor}\itshape} % format
+{{\textcolor{redColor}{\rule{0.3cm}{0.3cm}}} } % label
+{0.5ex} % sep
+{
+} % before-code
+[
+\vspace{0.5ex}%
+] % after-code
+
+
+ 
+%% ESTIL CALCULADORA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\tecla}[1]{
+	\tikz[baseline=(key.base)]
+	\node[%
+	draw,
+	fill=white,
+	drop shadow={shadow xshift=0.15ex,shadow yshift=-0.15ex,fill=black,opacity=0.75},
+	rectangle,
+	rounded corners=2pt,
+	inner sep=1pt,
+	line width=0.5pt,
+	font=\scriptsize\sffamily
+	](key) {#1\strut}
+	;
+}
+
+\newcommand{\pantalla}[1]{
+	{
+		\fcourier{11}{12}
+		\tikz[baseline=(key.base)]
+		\node[%
+		draw,
+		fill=white,
+		rectangle,
+		rounded corners=2pt,
+		inner sep=1pt,
+		line width=0.5pt,
+		](key) {#1\strut};
+	}
+}
+
+ 
+%% DEFINICIONS MATEMATIQUES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\renewcommand{\Re}{\mathbb{R}}	%conjunt dels nombres reals
+\newcommand{\alf}{\alpha}
+\newcommand{\tg}{\mathrm{tg}\,}
+\newcommand{\arctg}{\mathrm{arctg}\,}
+\newcommand{\cotg}{\mathrm{cotg}\,}
+\newcommand{\cosec}{\mathrm{cosec}\,}
+
+\newcommand{\limx}[2][x]{\mathop{lim}\limits_{#1\to #2} }
+\newcommand{\vvec}{\vec{\mathrm{v}} }
+\newcommand{\vx}{\mathrm{v}_x }
+\newcommand{\vy}{\mathrm{v}_y }
+
+\newcommand{\cient}[2]{\ensuremath{#1 \cdot 10^{#2}}}
+
+\def\Checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+\def\malament{ {\Large \bfseries \textcolor{redColor}{NO $\times$ }}}
+\def\be{ {\Large \bfseries \textcolor{darkGreenColor}{SÍ \Checkmark }}}
+
+
+%%% Decora la pàgina de BLOC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\decorateBlocRight}{
+	\begin{tikzpicture}[overlay, remember picture, shift={(current page.south west)}]
+ 	\draw [draw=none, fill=green!75!yellow] (0.94\paperwidth,0) rectangle (\paperwidth,\paperheight);
+	\draw [draw=none, fill=green!45!yellow] (0.93\paperwidth,0) rectangle (0.935\paperwidth,\paperheight);
+	\draw [draw=none, fill=green!35!yellow] (0.9225\paperwidth,0) rectangle (0.925\paperwidth,\paperheight);
+ 	\end{tikzpicture}
+}
+
+\newcommand{\decorateBlocLeft}{
+	\begin{tikzpicture}[overlay, remember picture, shift={(current page.south west)}]
+		\draw [draw=none, fill=green!75!yellow] (0,0) rectangle (0.04\paperwidth,\paperheight);
+		\draw [draw=none, fill=green!45!yellow] (0.045\paperwidth,0) rectangle (0.05\paperwidth,\paperheight);
+		\draw [draw=none, fill=green!35!yellow] (0.055\paperwidth,0) rectangle (0.0575\paperwidth,\paperheight);
+	\end{tikzpicture}
+}
+
+
+
+
+%%% Miscelania
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newlength{\strutheight}
+\settoheight{\strutheight}{\strut}
+
+%%Comando per dir que una activitat és dificil
+\newcommand{\spicy}[1][1]{
+	\foreach \n in {1,...,#1}{$\bigstar$} 
+}
+ 
+
+%%Permet utilitzar columna centrada
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\newcommand{\examplebox}[1]{\fbox{\colorbox{exampleColor}{#1}}}
+
+
+
+\newcommand{\vso}{\vspace{1cm}}
+\newcommand{\vsoo}{\vspace{1.5cm}}
+\newcommand{\vsooo}{\vspace{2cm}}
+\newcommand{\spen}{{\small \smallpencil}}
+\newcommand{\mental}{\includegraphics[width=0.5cm]{img-00/comments}\hspace{0.25cm}}
+\newcommand{\ggb}{\includegraphics[width=0.5cm]{img-00/geogebra.png}\hspace{0.25cm}}
+
+\newcommand{\ggblink}[1]{\par \href{#1}{\includegraphics[width=0.3cm]{img-base/elink}} {\small #1} 
+}
+
+\endinput
