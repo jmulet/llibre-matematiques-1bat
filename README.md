@@ -1,6 +1,8 @@
 # llibre-matematiques-1bat
 Llibre de matemàtiques de 1r de batxillerat de ciències (Català)
 
+![cover][src/covers/tapes-1bat-mini.png]
+
 Aquest és un llibre de matemàtiques de 1r de batxillerat derivat de l'obra Marea Verde de Matemáticas.
 
 Està escrit en LaTeX i necessita nodejs per compilar scripts de generació de solucions.
