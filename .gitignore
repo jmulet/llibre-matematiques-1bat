@@ -1,4 +1,9 @@
 dist/
+aux/
+output-student/
+output-teacher/
+output-answers/
+node_modules/
 *.ans
 
 ## Core latex/pdflatex auxiliary files:

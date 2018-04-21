@@ -4,7 +4,7 @@ var rmnum = require("roman-numerals");
 
 var MAX_PAGES=152;
 var OFFSET = 0;
-var NOM_LLIBRE = "llibre-1BAT-color";
+var NOM_LLIBRE = "./output-student/llibre-1bat-student";
 
 var pagesToEnlarge = [];
 var pagesToReduce = [];
@@ -17,6 +17,7 @@ var laterFlow = {36:36,51:20,52:1,116:40};		//  postpone output of {page: exer} 
 var forceColumns = {16:{2:2},21:{21:2}, 48:{8:1}, 49:{7:2,9:4,10:4,11:2}, 61:{8:1}, 81:{19:2}, 87:{4:1,5:1},
 	91:{23:1,24:1}, 92:{26:2, 27:1, 28:1}, 93:{31:1}, 95:{44:2}, 96:{48:2}, 97:{49:2}, 126:{38:1}, 143:{1:1}, 144:{4:1}, 146:{7:1},
 	 151:{17:1, 18:1}, 126:{27:1, 28:1},149:{11:1}};
+
 function getForceColumns(p, i){
 	var ex = null;
 	var page = forceColumns[p];
@@ -30,7 +31,7 @@ function getForceColumns(p, i){
 var json = [];
 
 try{
-	var text = fs.readFileSync("studentkeys.ans", "utf-8");
+	var text = fs.readFileSync("./output-student/studentkeys.ans", "utf-8");
 	var end = text.lastIndexOf(",");
 	text = "["+text.substring(0, end)+"]";
 	text = text.replace(/\\/g, "\\\\");
@@ -43,16 +44,17 @@ try{
 
 var extra = "";
 try{
-	extra = fs.readFileSync("./teacher-book-extra.tex", "utf-8");
+	extra = fs.readFileSync("./src/teacher-book-extra.tex", "utf-8");
 } catch(Ex){
 	//Create empty file
-	fs.openSync("./teacher-book-extra.tex", 'w');
+	fs.openSync("./src/teacher-book-extra.tex", 'w');
 }
 
 var cachePage = [];
  
 var tex = [];
 function preamble(tex){
+	tex.push("%% This is an automatically generated file. Changes will be lost");
 	tex.push("\\documentclass{book}");
 	tex.push("\\usepackage{iesbbook}  % main style");
 	tex.push("\\usepackage{pdfpages}  % insert pages from external pdf");
@@ -61,7 +63,7 @@ function preamble(tex){
 	//tex.push("\\let\\ofrac\\frac");
 	//tex.push("\\let\\frac\\dfrac");
 	//tex.push("\\usepackage{pxfonts}");
-	tex.push("\\input{./teacher-book-extra}")
+	tex.push("\\input{teacher-book-extra}")
 
 	//tex.push("\\geometry{a4paper,total={170mm,257mm},left=20mm,right=13mm,top=20mm,bottom=20mm}");
 	//tex.push("\\usepackage[export]{adjustbox}");
@@ -558,4 +560,4 @@ for(var kk=1; kk<MAX_PAGES; kk++){
 tex.push("\\end{document}");
 
 console.log("Dumping generated tex file... teacher-book.tex")
-fs.writeFileSync("teacher-book.tex", tex.join("\n"));
+fs.writeFileSync("./src/llibre-1bat-teacher.tex", tex.join("\n"));

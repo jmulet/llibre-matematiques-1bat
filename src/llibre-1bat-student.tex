@@ -1,0 +1,96 @@
+
+\documentclass[11pt, a4paper, twoside, pdf]{book}
+% Opcions 
+%  draft : mostra una marca d'aigua
+%  bn : no carrega hyperref i la majoria de colors són escala de grisos
+\usepackage{iesbbook}
+
+\makesolucionari
+ 
+
+\begin{document}
+	
+\pagestyle{empty}
+\include{portada}
+
+
+\pagestyle{fancy}
+
+ 
+  
+\mypart[Fractal de Mandelbrot. La bellesa dels nombres complexos.]{ARITMÈTICA, ÀLGEBRA I TRIGONOMETRIA}{img-00/bloc1}
+
+\vspace*{\fill}
+\begin{center}
+	\includegraphics[width=0.65\textwidth]{img-00/bloc1-historia}
+\end{center}
+\vspace*{\fill}
+
+\include{chap-01-reals}
+\include{chap-02-algrebra}
+\include{chap-03-trigonometria}
+\include{chap-04-complexos}
+ 
+%%%%% Activitats de bloc 1
+\include{chap-04-bloc1}
+
+\mypart[L'anàlisi de sèries temporals és cabdal en la vida quotidiana.]{ANÀLISI DE FUNCIONS}{img-00/bloc2}
+ 
+\vspace*{\fill}
+\begin{center}
+	\includegraphics[width=0.65\textwidth]{img-00/bloc2-historia}
+\end{center}
+\vspace*{\fill} 
+ 
+\include{chap-05-funcions}
+\include{chap-06-limits}
+\include{chap-07-derivades}
+
+%%%%% Activitats de bloc 2
+\include{chap-07-bloc2}
+
+
+  
+\mypart[La naturalesa està escrita en llenguatge matemàtic. --Galileo Galilei--]{GEOMETRIA EN EL PLA}{img-00/bloc3}
+
+\vspace*{\fill}
+\begin{center}
+	\includegraphics[width=0.65\textwidth]{img-00/bloc3-historia}
+\end{center}
+\vspace*{\fill}
+
+\include{chap-08-vectors}
+\include{chap-09-analitica}
+\include{chap-10-coniques}
+
+%%%%% Activitats de bloc 3
+
+\include{chap-10-bloc3}
+ 
+\mypart[(...) Aconseguírem obtenir així la fórmula estadística per conèixer la posició d'un electró. Però, personalment, no crec que Déu jugui als daus. --Albert Einstein--]{ESTADÍSTICA I PROBABILITAT}{img-00/bloc4}
+
+\vspace*{\fill}
+\begin{center}
+	\includegraphics[width=0.65\textwidth]{img-00/bloc4-historia}
+\end{center}
+\vspace*{\fill}
+
+\include{chap-11-estadistica}
+
+%\include{chap-12-probabilitat}
+
+
+\pagestyle{blocfancy}
+
+\newpage 
+\immediate\closeout\studentkeys
+
+\def\currentname{Solucionari}
+\fakechapter[\simbolclaubig]{ Solucions }
+\addcontentsline{toc}{part}{Solucions}
+\begin{multicols}{2}
+	\fontsize{10.4}{12.4}\selectfont
+	\input{studentkeys}
+\end{multicols}
+
+\end{document} 
