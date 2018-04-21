@@ -22,3 +22,6 @@ Trobareu els pdf generats en els directoris output-student, output-teacher i out
  
 ## Llicència
 La llicència és la mateixa que l'obra original. Creative Commons no comercial, compartir igual.
+
+![cover](src/by-nc-sa.png)
+
