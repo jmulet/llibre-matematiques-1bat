@@ -10,28 +10,28 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="451mm"
-   height="317mm"
-   viewBox="0 0 1598.0315 1123.2283"
+   width="451.46158mm"
+   height="318.52371mm"
+   viewBox="0 0 1599.667 1128.6273"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="tapes-1bat.svg"
-   inkscape:export-filename="/Users/josep/Dropbox/LATEX/1BAT/tapes-1bat.png"
+   inkscape:export-filename="/Users/josep/LATEX/llibre-matematiques-1bat/src/covers/tapes-1bat.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
      id="defs4">
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 561.61415 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="1598.0315 : 561.61415 : 1"
-       inkscape:persp3d-origin="799.01575 : 374.40943 : 1"
+       inkscape:vp_x="0 : 561.61419 : 1"
+       inkscape:vp_y="0 : 1000.0001 : 0"
+       inkscape:vp_z="1598.0315 : 561.61419 : 1"
+       inkscape:persp3d-origin="799.01575 : 374.40945 : 1"
        id="perspective3820" />
     <filter
        inkscape:label="Light Eraser"
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        id="filter4424">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -20.2937 -68.3207 -6.88555 87.2 0 "
@@ -42,11 +42,14 @@
          operator="arithmetic"
          k2="0.9"
          result="composite"
-         id="feComposite4428" />
+         id="feComposite4428"
+         k1="0"
+         k3="0"
+         k4="0" />
     </filter>
     <filter
        inkscape:label="Light Eraser"
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        id="filter3787">
       <feColorMatrix
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -19.4087 -65.3411 -6.58526 82.4 0 "
@@ -57,7 +60,10 @@
          operator="arithmetic"
          k2="1"
          result="fbSourceGraphic"
-         id="feComposite3791" />
+         id="feComposite3791"
+         k1="0"
+         k3="0"
+         k4="0" />
       <feColorMatrix
          result="fbSourceGraphicAlpha"
          in="fbSourceGraphic"
@@ -73,7 +79,10 @@
          in2="colormatrix"
          operator="arithmetic"
          k2="1"
-         result="composite" />
+         result="composite"
+         k1="0"
+         k3="0"
+         k4="0" />
     </filter>
   </defs>
   <sodipodi:namedview
@@ -81,19 +90,23 @@
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="586.2117"
-     inkscape:cy="569.98375"
+     inkscape:zoom="0.8885192"
+     inkscape:cx="779.25516"
+     inkscape:cy="571.59172"
      inkscape:document-units="px"
-     inkscape:current-layer="g3710"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="2560"
      inkscape:window-height="1316"
-     inkscape:window-x="45"
-     inkscape:window-y="94"
-     inkscape:window-maximized="0" />
+     inkscape:window-x="5"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="-7"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -110,7 +123,8 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Capa 2"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(1.1987518,0.27156478)">
     <rect
        style="fill:#d45500;stroke:#000000;stroke-width:1.52732146"
        id="rect3464"
@@ -146,12 +160,13 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Capa 3"
-     style="display:inline" />
+     style="display:inline"
+     transform="translate(1.1987518,0.27156478)" />
   <g
      inkscape:label="guies"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,70.866142)"
+     transform="translate(1.1987518,71.137707)"
      style="display:none">
     <g
        id="g3442">
@@ -218,7 +233,7 @@
          id="flowPara3620" /></flowRoot>  </g>
   <g
      style="display:inline"
-     transform="translate(0,70.866142)"
+     transform="translate(1.1987518,71.137707)"
      id="g3710"
      inkscape:groupmode="layer"
      inkscape:label="bolles">
@@ -303,7 +318,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer4"
-     inkscape:label="Capa 4">
+     inkscape:label="Capa 4"
+     transform="translate(1.1987518,0.27156478)">
     <text
        transform="translate(0,70.866142)"
        xml:space="preserve"
@@ -378,17 +394,18 @@
          y="815.61609"
          id="tspan3612">iesbinissalem@educaib.eu</tspan></text>
     <text
-       transform="translate(0,70.866142)"
+       transform="scale(1.0426659,0.95907999)"
        xml:space="preserve"
-       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:27.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#222b00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="1329.0176"
-       y="984.47998"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:23.40945625px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#222b00;stroke-width:0.85125297px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1276.3566"
+       y="1096.2965"
        id="text3725"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3727"
-         x="1329.0176"
-         y="984.47998">Josep Mulet</tspan></text>
+         x="1276.3566"
+         y="1096.2965"
+         style="stroke-width:0.85125297px">Josep Mulet</tspan></text>
     <image
        y="1009.0436"
        x="243.83125"
@@ -419,5 +436,30 @@
        preserveAspectRatio="none"
        height="181.7924"
        width="176.64732" />
+    <ellipse
+       style="opacity:0.95899999;fill:#d45500;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.36407235;stroke-linejoin:miter;stroke-miterlimit:0.30000001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4199"
+       cx="1455.1022"
+       cy="406.31174"
+       rx="54.753448"
+       ry="53.038834" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1478.3994"
+       y="-328.59326"
+       id="text4201"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.88616611,0.4633677,-0.4633677,0.88616611,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan4203"
+         x="1478.3994"
+         y="-328.59326"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:27.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke:#333333">3a</tspan><tspan
+         sodipodi:role="line"
+         x="1478.3994"
+         y="-294.21826"
+         id="tspan4205"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:27.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke:#333333">Edició</tspan></text>
   </g>
 </svg>
