@@ -255,7 +255,8 @@ Determina la direcció del vehicle quan està a 2 km de distància sobre l'horit
 Interpreta de nou la definició de derivada en un punt basant-te en aquesta figura.
 
 
-\exer  Calcula la derivada mitjançant el límit de la funció $y= x^2 - x+ 1$ en el punt $x=1$. Repeteix el càlcul per un punt arbitrari $x=a$. 
+\exer  Calcula la derivada de la funció $y= x^2 - x+ 1$ en el punt $x=1$ mitjançant la definició amb límit. 
+Repeteix el càlcul per un punt arbitrari $x=a$. 
 Calcula mitjançant l'expressió resultant $f'(1)$, $f'(2)$, $f'(12)$, $f'(5.43)$ i $f'(-7)$.
 \answers{$f'(a)=\limx[h]{0} {\dfrac{(a+h)^2-(a+h)+1 -(a^2-a+1)}{h}=\limx[h]{0} \dfrac{h\,(2a+h-1)}{h}=2a-1}$\par 
 $f'(1)=1$, $f'(2)=3$, $f'(12)=23$, $f'(5.43)=9.86$ i $f'(-7)=-15$. En general, la funció derivada, $f'(x)=2x-1$.}
@@ -1154,10 +1155,10 @@ $f'(1)=1$, $f'(2)=3$, $f'(12)=23$, $f'(5.43)=9.86$ i $f'(-7)=-15$. En general, l
 		\textbf{Solucions de} $f'(x)=0$ & \multicolumn{2}{l|} {$x=-1$, $x=0$, $x=1$} \\  [1.5ex] \hline 
 		6.  \textbf{Creixement}: & Creixent $(-1,0)\cup(1,+\infty)$ & Decreixent $(-\infty,-1)\cup(0,1)$  \\  [1.5ex] \hline  
 		7. \textbf{Extrems} & Màxim $(x=0, y=-8)$ & Mínims $(x=-1, y=-9)$, $(x=1, y=-9)$ \\  [1.5ex] \hline 
-		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=12x^2-2$} \\  [1.5ex] \hline 
-		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {$x=-{1 \over 2}$, $x={1 \over 2}$} \\  [1.5ex] \hline 
-		9.  \textbf{Curvatura}: & Còncava $(-\infty, -1/2) \cup (1/2,+\infty)$ & Convexa $(-1/2, 1/2)$  \\  [1.5ex] \hline   
-		10. \textbf{Punts d'inflexió} & \multicolumn{2}{l|} {$(x=-1/2, y=-135/16\approx -8.43)$, $(x=1/2, y=-135/16\approx -8.43)$} \\  [1.5ex] \hline 
+		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=12x^2-4$} \\  [1.5ex] \hline 
+		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {$x=-{\sqrt{3} \over 3}$, $x={\sqrt{3} \over 3}$} \\  [1.5ex] \hline 
+		9.  \textbf{Curvatura}: & Còncava $(-\infty, -\sqrt{3}/3) \cup (\sqrt{3}/3,+\infty)$ & Convexa $(-\sqrt{3}/3, \sqrt{3}/3)$  \\  [1.5ex] \hline   
+		10. \textbf{Punts d'inflexió} & \multicolumn{2}{l|} {$(x=-\sqrt{3}/3, y=-8.56)$, $(x=\sqrt{3}/3, y=-8.56)$} \\  [1.5ex] \hline 
 		\multicolumn{3}{|p{\textwidth}|} {\textbf{Gràfica}: 
 			
 			\begin{center}
@@ -1251,7 +1252,7 @@ $f'(1)=1$, $f'(2)=3$, $f'(12)=23$, $f'(5.43)=9.86$ i $f'(-7)=-15$. En general, l
 		\textbf{Solucions de} $f'(x)=0$ & \multicolumn{2}{l|} {$x=-1$, $x=3$} \\  [1.5ex] \hline 
 		6.  \textbf{Creixement}: & Creixent 
 		$(-\infty,-1)\cup (3,+\infty)$ & Decreixent $(-1,1)\cup (1,3)$  \\  [1.5ex] \hline  
-		7. \textbf{Extrems} & Màxim $(x=3,y=6)$ & Mínim $(x=-1, y=-2)$ \\  [1.5ex] \hline 
+		7. \textbf{Extrems} & Mínim $(x=3,y=6)$ & Màxim $(x=-1, y=-2)$ \\  [1.5ex] \hline 
 		8. \textbf{Derivada segona} & \multicolumn{2}{l|} {$f''(x)=\dfrac{8}{(x-1)^3}$} \\  [1.5ex] \hline 
 		\textbf{Solucions de $f''(x)=0$} & \multicolumn{2}{l|} {No en té} \\  [1.5ex] \hline 
 		9.  \textbf{Curvatura}: & Còncava $(1,+\infty)$ & Convexa 
@@ -1371,7 +1372,8 @@ $f'(1)=1$, $f'(2)=3$, $f'(12)=23$, $f'(5.43)=9.86$ i $f'(-7)=-15$. En general, l
 	\begin{minipage}{0.3\textwidth}
 		\includegraphics*[width=0.7\textwidth]{img-07/chap-deriv-caixa.pdf}	
 	\end{minipage}
-	\answers{El volum de les caixes en funció de $x$ és $V(x)=(25-2x)\cdot(20-2x)\cdot x$. El valor pel qual hi ha el màxim és $x=3.68$ cm.}
+	\answers{El volum de les caixes en funció de $x$ és $V(x)=(25-2x)\cdot(20-2x)\cdot x$. El valor pel qual hi ha el màxim és $x=3.68$ cm,
+	 $V=820.53$ cm$^{3}$.}
 	
 	
 	\exer Uns barrils per emmagatzemar oli són cilíndrics i tenen una capacitat de 150 litres. Si es desitja construir-los de manera que la seva superfície total sigui mínima, quant ha de mesurar la seva altura i el radi de la seva base?
