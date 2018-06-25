@@ -6,7 +6,7 @@ text = "["+text.substring(0, end)+"]";
 text = text.replace(/\\/g, "\\\\");
 
 let chapterSingleColumn = [7]
-let forceColumns = {13:{21:2,24:2}, 21:{21:2}, 23:{31:2}, 59:{8:1}, 61:{8:1}, 85:{4:1, 5:1}, 89:{19:2, 21:2}, 
+let forceColumns = {13:{21:2,24:2}, 21:{21:2}, 23:{31:2}, 26:{43:1}, 28:{52:2, 53:2}, 40:{60:4}, 48:{3:2}, 59:{8:1}, 61:{8:1}, 85:{4:1, 5:1}, 89:{19:2, 21:2}, 
 90:{25:2, 26:2}, 91:{19:2}, 92:{25:2, 26:2,33:2, 34:2}, 
 93:{30:2, 43:2, 44:2}, 94:{33:2, 34:2, 48:2}, 95:{49:2, 43:2,44:2}, 96:{48:2}, 97:{49:2}, 125:{27:1}, 
 111:{3:2}, 114:{14:1}, 127:{27:1}, 146:{7:1} , 151:{17:1, 18:1}};
@@ -42,7 +42,7 @@ tex.push("\\begin{center}");
 tex.push("\\vspace*{0.5cm}\\hrule\\vspace{0.5cm}");
 tex.push("\\Huge \\textbf{Matemàtiques I} \\par");
 tex.push("\\Large 1r de Batxillerat de ciències\\par");
-tex.push("\\large \\textit{Sèrie Pràctica}\\par");
+tex.push("\\large \\textit{Sèrie Pràctica \\textbf{3a Edició}}\\par");
 tex.push("\\vspace{0.5cm}\\hrule\\vspace{0.5cm}");
 tex.push("\\Huge \\textbf{\\textsc{Solucionari}} \\par \\vspace{1.5cm}");
 

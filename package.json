@@ -5,16 +5,16 @@
   "main": "index.js",
   "scripts": {
     "student-genkeys": "node ./scripts/generate-student-keys.js",
-    "student-draft": "export TEXINPUTS=\".:./src:\" && pdflatex -draftmode -interaction=batchmode --output-directory=output-student src/llibre-1bat-student.tex",
-    "student-book": "mkdir -p output-student && npm run-script student-draft && npm run-script student-genkeys && npm run-script student-draft && pdflatex -output-directory=output-student src/llibre-1bat-student.tex",
+    "student-draft": "export TEXINPUTS=\".:./src:\" && pdflatex -draftmode  --output-directory=output-student ./src/llibre-1bat-student.tex && echo \"done draft\"",
+    "student-book": "mkdir -p output-student && npm run-script student-draft && npm run-script student-genkeys && npm run-script student-draft && export TEXINPUTS=\".:./src:\" &&  pdflatex --output-directory=output-student src/llibre-1bat-student.tex",
    
     "teacher-pax": "/usr/local/texlive/2016/texmf-dist/scripts/pax/pdfannotextractor.pl ./output-student/llibre-1bat-student.pdf",
     "teacher-genkeys": "node ./scripts/generate-teacher-book.js",
     "teacher-draft": "export TEXINPUTS=\".:./src:\" && pdflatex -draftmode -interaction=batchmode --output-directory=output-teacher src/llibre-1bat-teacher.tex",
-    "teacher-book": "npm run-script teacher-pax && mkdir -p output-teacher && npm run-script teacher-genkeys && pdflatex -draftmode -output-directory=output-teacher src/llibre-1bat-teacher.tex && pdflatex -output-directory=output-teacher src/llibre-1bat-teacher.tex",
+    "teacher-book": "npm run-script teacher-pax && mkdir -p output-teacher && npm run-script teacher-genkeys && export TEXINPUTS=\".:./src:\" &&  pdflatex -draftmode -output-directory=output-teacher src/llibre-1bat-teacher.tex && pdflatex -output-directory=output-teacher src/llibre-1bat-teacher.tex",
    
     "answers-genkeys": "node ./scripts/generate-answers-book.js",
-    "answers-book": "export TEXINPUTS=\".:./src:\" && mkdir -p output-answers && npm run-script student-draft && npm run-script answers-genkeys && pdflatex -draftmode -output-directory=output-answers src/llibre-1bat-answers.tex && pdflatex -output-directory=output-answers src/llibre-1bat-answers.tex && open -a Preview output-answers/llibre-1bat-answers.pdf",
+    "answers-book": "export TEXINPUTS=\".:./src:\" && mkdir -p output-answers && npm run-script student-draft && npm run-script answers-genkeys && export TEXINPUTS=\".:./src:\"  && pdflatex -draftmode --output-directory=output-answers src/llibre-1bat-answers.tex && pdflatex -output-directory=output-answers src/llibre-1bat-answers.tex && open -a Preview output-answers/llibre-1bat-answers.pdf",
     "test": "echo \"Error: no test specified\" && exit 1",
     "help": "echo \"npm run student-book :: Generates student's book\""
   },

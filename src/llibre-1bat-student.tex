@@ -4,7 +4,14 @@
 %  draft : mostra una marca d'aigua
 %  bn : no carrega hyperref i la majoria de colors són escala de grisos
 \usepackage{iesbbook}
-
+\newenvironment{extrapage}{
+	\clearpage\stepcounter{nopagecount}%
+	\renewcommand{\thepage}{Fitxa \arabic{nopagecount}}%
+	\thispagestyle{empty}
+}
+{
+	\clearpage \addtocounter{page}{-1}
+}
 \makesolucionari
  
 
